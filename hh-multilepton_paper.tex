@@ -1,0 +1,78 @@
+\RCS$Revision: 450971 $
+\RCS$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/papers/HIG-17-018/trunk/HIG-17-018.tex $
+\RCS$Id: HIG-17-018.tex 450971 2018-03-14 11:21:02Z veelken $
+
+\newlength\cmsFigWidth
+\ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.85\columnwidth}}{\setlength\cmsFigWidth{0.4\textwidth}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom\xspace}}{\providecommand{\cmsRight}{right\xspace}}
+
+\newcommand{\metHT}{\ensuremath{H_{\mathrm{T}}^\text{miss}}\xspace}
+\newcommand{\metLD}{\ensuremath{L_\mathrm{D}\xspace}}
+
+\renewcommand{\mT}{\ensuremath{m_\mathrm{T}}}
+\newcommand{\mTprime}{\ensuremath{m^{'}_\mathrm{T}}}
+
+\renewcommand{\tauh}{\ensuremath{\Pgt_{\mathrm{h}}}\xspace}
+\newcommand{\Plepton}{\ensuremath{\ell}}
+\newcommand{\PLepton}{\ensuremath{\ell}}
+\newcommand{\Ppizero}{\ensuremath{\Pgpz}}
+\newcommand{\Pnu}{\ensuremath{\PGn}}
+\newcommand{\Pnut}{\ensuremath{\PGn_{\Pgt}}}
+\newcommand{\APnut}{\ensuremath{\PAGn_{\Pgt}}}
+\renewcommand{\Pgg}{\ensuremath{\PGg}\xspace}
+\newcommand{\Pggx}{\ensuremath{\PGg^{*}}\xspace}
+\newcommand{\APnu}{\ensuremath{\overline{\Pnu}}\xspace}
+\newcommand{\PHiggs}{\ensuremath{\PH}}
+\newcommand{\Pbottom}{\ensuremath{\PQb}}
+\newcommand{\Pcharm}{\ensuremath{\PQc}}
+\newcommand{\APbottom}{\ensuremath{\PAQb}}
+\newcommand{\Ptop}{\ensuremath{\PQt}}
+\newcommand{\APtop}{\ensuremath{\PAQt}}
+\renewcommand{\ttbar}{\ensuremath{\mathrm{\ptop\APtop}\text{+jets}}}
+
+\renewcommand{\ss}{\ensuremath{\text{ss}}}
+\newcommand{\jet}{\ensuremath{\mathrm{j}}}
+\newcommand{\bjet}{\ensuremath{\mathrm{b}}}
+\newcommand{\jj}{\ensuremath{\mathrm{jj}}}
+\newcommand{\vis}{\ensuremath{\text{vis}}}
+
+\newlength\cmsTabSkip\setlength{\cmsTabSkip}{1ex}
+
+\providecommand{\NA}{\ensuremath{\text{---}}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\CL}{C.L.\xspace}}{\providecommand{\CL}{CL\xspace}}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\cmsNoteHeader{HIG-21-XXX}
+\title{Search for Higgs boson pair production in final states with electrons, muons, and hadronically decaying $\PGt$ leptons at $\sqrt{s} = 13\TeV$}
+
+\date{\today}
+
+\abstract{
+XXX
+}
+
+\hypersetup{
+pdfauthor={The CMS Collaboration},
+pdftitle={Search for Higgs boson pair production in final states with electrons, muons, and hadronically decaying tau leptons at at sqrt(s) = 13 TeV},
+pdfsubject={CMS},
+pdfkeywords={CMS, physics}}
+
+\maketitle
+
+\include{introduction}
+\include{detector}
+\include{datasets}
+\include{eventReconstruction}
+\include{eventSelection}
+\include{backgroundEstimation}
+\include{systematicUncertainties}
+\include{results}
+\include{summary}
+
+\newpage
+
+\bibliography{auto_generated}
