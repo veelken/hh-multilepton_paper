@@ -1,4 +1,113 @@
 \section{Introduction}
 \label{sec:introduction}
 
+During the eight years that have passed since the discovery~\cite{Higgs-Discovery_CMS,Higgs-Discovery_CMS_long,Higgs-Discovery_ATLAS} of the Higgs ($\PHiggs$) boson,
+many of its properties have already been measured with remarkable precision~\cite{HIG-14-042,HIG-15-002,ATLAS_SpinCP,HIG-14-018,HIG-16-041}.
+Among the most important of these properties is the $\PHiggs$ boson self-coupling, as the measurement of this coupling allows to reconstruct the Higgs potential,
+which in turn will allow to verify that the mechanism that breaks the electroweak gauge symmetry is indeed the Higgs mechanism postulated by the Standard Model (SM).
+The latter predicts the existence of a trilinear as well as of a quartic $\PHiggs$ boson self-coupling.
+The quartic self-coupling is unfortunately not experimentally accessible at the LHC,
+as its determination requires the measurement of the rate for triple $\PHiggs$ boson production, 
+which is much too small to be measured at the LHC~\cite{de_Florian_2020}, 
+even with the full luminosity of $3000$~\fbinv that is expected to be delivered by the upcoming high-luminosity LHC upgrade~\cite{HL-LHC-TDR}.
+The trilinear self-coupling is experimentally accessible at the LHC and can be determined by measuring the rate for $\PHiggs$ boson pair ($\HH$) production.
 
+In the SM, $\HH$ production proceeds via two different processes.
+The leading order (LO) Feynman diagrams for the dominant ``gluon-fusion'' ($\ggHH$) process are shown in the upper half of Fig.~\ref{fig:Feynman_ggHH_and_qqHH_sm}.
+The left diagram is referred to as ``triangle'' diagram and the one shown on the right as ``box'' diagram.
+The amplitude of the triangle diagram varies proportional to the values of the $\PHiggs$ boson self-coupling, denoted by the symbol $\lambda$, 
+and of the Yukawa coupling of the top quark, denoted by the symbol $\yt$,
+while the amplitude of the box diagram does not depend on $\lambda$ and varies proportional to $\yt^{2}$.
+The triangle and box diagrams interfere destructively with each other, 
+causing the cross section for the $\ggHH$ process to exhibit a strong dependence on $\lambda$ and $\yt$.
+We denote the values of $\lambda$ and $\yt$ with respect to the SM expectation for these couplings by the symbols $\kappal$ and $\kappat$, respectively.
+The parameters $\kappal$ and $\kappat$ are referred to as ``coupling strength modifiers'' in the literature.
+In the SM, $\kappal = 1$ and $\kappat = 1$, by definition.
+The SM cross section for $\HH$ production via $\ggHH$ the process has been computed at next-to-next-to-leading (NNLO) accuracy in quantum chromodynamics (QCD)
+and amounts to $31.05^{+1.40}_{-1.98}$~\fb~\cite{Grazzini:2018hh}.
+Effects due to the finite mass of the top quark are included up to next-to-leading (NLO) accuracy in the calculation.
+The LO Feynman diagrams for the subdominant ``vector-boson-fusion'' ($\qqHH$) process are shown in the lower half of Fig.~\ref{fig:Feynman_ggHH_and_qqHH_sm}.
+The  SM cross section for this process has been computed at next-to-next-to-next-to-leading order (N$^{3}$LO) in QCD
+and amounts to $1.73 \pm 0.04$~\fb~\cite{Dreyer:2018qbw}.
+Similarly to the $\ggHH$ process, the interference between the different diagrams causes the cross section for the $\qqHH$ process to exhibit a strong dependence on the relevant couplings,
+which in the case of the $\qqHH$ process are given by the five couplings $\lambda$, $\cW$, $\cWW$, $\cZ$, and $\cZZ$,
+where the symbols $\cW$ ($\cZ$) and $\cWW$ ($\cZZ$) denote, respectively, the trilinear and quartic coupling of the $\PHiggs$ boson to the $\PW$ ($\PZ$) boson.
+Assuming the couplings $\cW$ and $\cZ$ ($\cWW$ and $\cZZ$) to vary by the same amount with respect to their SM expectation 
+and denoting the corresponding coupling strength modifier by the symbol $\kappaV$ ($\kappaVV$) leaves us with five free parameters
+when analyzing $\HH$ production via the $\ggHH$ and $\qqHH$ process.
+Due to the interference deviations of these five coupling strength modifiers from unity not only affect the rate of $\HH$ production,
+but also the distribution of the $\HH$ signal in kinematic observables.
+The distribution in $\mHH$, the mass of the $\PHiggs$ boson pair, is sensitive to variations in the $\PHiggs$ boson couplings $\kappal$ and $\kappat$ in particular,
+as variations of these couplings affect the amplitudes of the triangle and box diagrams differently, thus altering their interference.
+As the $\ggHH$ and $\qqHH$ production processes typically results in a broad distribution in $\mHH$,
+they are referred to as non-resonant $\HH$ production.
+
+The presence of as yet undiscovered particles, predicted by a variety of theories beyond the SM, may alter the $\HH$ production rate
+as well as the distributions in kinematic observables.
+If they exist, such particles are expected to give rise to loop diagrams similar to the ones shown in Fig.~\ref{fig:Feynman_ggHH_and_qqHH_sm}.
+These loop contributions may enhance the $\HH$ production rate significantly,
+as they occur at the same loop level as the triangle and box diagrams that govern $\HH$ production in the SM.
+As none of these new particles have yet been discovered, however, one is lead to conclude that their mass is at the \TeV scale or higher,
+in any case significantly above the scale of the electroweak symmetry breaking.
+Their high mass allows to approximate the loop contributions of new particles by contact interactions of the $\PHiggs$ boson.
+The approach is referred to as effective field theory (EFT) in the literature~\cite{Buchmuller:1985jz,Grzadkowski:2010es}.
+We follow Ref.~\cite{Carvalho:2015ttv} and model the contact interactions relevant for $\HH$ production by the three couplings $\cg$, $\cgg$, and $\ctwo$,
+referring to the contact interaction between two gluons and two $\PHiggs$ bosons, two gluons and one $\PHiggs$ boson, 
+and between two top quarks and two $\PHiggs$ bosons, respectively.
+The corresponding Feynman diagrams for $\HH$ production via the $\ggHH$ process are shown in Fig.~\ref{fig:Feynman_ggHH_eft}.
+The couplings $\cg$, $\cgg$, and $\ctwo$ also alter the rate of $\HH$ production via the $\qqHH$ process.
+We focus on the EFT interpretation of the $\ggHH$ process in this paper,
+as we expect our analysis of $\HH$ production in final states with electrons, muons, and hadronically decaying $\PGt$ leptons
+to have little sensitivity to the $\qqHH$ process, due to the small signal yield.
+
+Besides the enhancement of the $\HH$ production rate from non-SM values of the $\PHiggs$ boson couplings or loop contributions of new particles,
+an excess of $\HH$ signal over the rate of events expected in the SM may also results from decays of new heavy particles into pairs of SM $\PHiggs$ bosons.
+Various theories beyond the SM postulate such decays, in particular:
+two-Higgs doublet models~\cite{Craig:2013hca,Nhung:2013lpa},
+composite Higgs models~\cite{Grober:2010yv,Contino:2010mh}, Higgs portal models~\cite{Englert:2011yb,No:2013wsa},
+and models inspired by warped extra dimensions (WED)~\cite{Randall:1999ee}.
+In models inspired by WED, the new heavy particles may either have spin $J=0$ or spin $J=2$,
+and are referred to as ``radions'' and gravitons, respectively~\cite{Cheung:2000rw}.
+In this paper, we focus on the case that the width of the heavy particles is negligible compared to the experimental resolution on $\mHH$.
+The presence of heavy particles decaying to $\PHiggs$ boson pairs then manifests itself as a peak in the reconstructed $\mHH$ distribution.
+We refer to this case as resonant $\HH$ production and we denote the heavy resonance by the symbol $\X$.
+
+In this paper, we present the results of a search for non-resonant as well as resonant $\HH$ production
+in final states with electrons, muons, and hadronically decaying $\PGt$ leptons. The latter are denoted by the symbol $\tauh$.
+The search is based on proton-proton ($\Pp\Pp$) collision data recorded by the CMS experiment at $\sqrt{s} = 13$~\TeV center-of-mass energy
+and corresponding to an integrated luminosity of $137.2$~\fbinv.
+Seven distinct final states, distinguished by the multiplicity of leptons and $\tauh$, are included in the analysis:
+$0\Plepton + 4\tauh$, $1\Plepton + 3\tauh$, $2\Plepton\ss$, $2\Plepton + 2\tauh$, $3\Plepton$, $3\Plepton + 1\tauh$, and $4\Plepton$,
+where we have used the symbol $\ss$ to indicate that the two leptons are required to be of the same electric charge. 
+These final states, to which we will also refer to as ``channels'', 
+target $\HH$ signal events in which the $\PHiggs$ boson pair decays into either $\PW\PW\PW\PW$, $\PW\PW\PGt\PGt$, or $\PGt\PGt\PGt\PGt$.
+The $\PW$ bosons and $\PGt$ leptons subsequently decay either leptonically or hadronically.
+Dedicated multi-variate methods are used to distinguish the $\PHiggs\PHiggs$ signal from backgrounds.
+
+Phenomenological studies of the prospects for discovering the $\HH$ signal in the decay mode to $\PW\PW\PW\PW$ 
+are documented in Refs.~\cite{Baur:2002rb,Baur:2002qd,Li:2015yia,Adhikary:2017jtu,Ren:2017jbg}.
+The ATLAS collaboration has published the results of a search for non-resonant as well as resonant $\HH$ production in the same decay mode in Ref.~\cite{Aaboud:2018ksn},
+based on $36.1$~\fbinv of $\Pp\Pp$ collision data recorded at $\sqrt{s} = 13$~\TeV.
+The phenomenological studies and also the ATLAS analysis focus on the final states $2\Plepton\ss$, $3\Plepton$, and $4\Plepton$.
+The analysis published in this paper constitutes the first search for $\HH$ production in the decay modes $\PW\PW\PGt\PGt$ and $\PGt\PGt\PGt\PGt$.
+Searches for $\HH$ production in $\Pp\Pp$ collisions at $\sqrt{s} = 7$, $8$, and $13$~\TeV
+have previously been performed by the CMS and ATLAS collaborations in the decay modes 
+$\Pbottom\Pbottom\PGg\PGg$~\cite{Aad:2014yja,Khachatryan:2016sey,Sirunyan:2018iwt,Aaboud:2018ftw}, 
+$\Pbottom\Pbottom\Pbottom\Pbottom$~\cite{Khachatryan:2015yea,Aad:2015uka,Aaboud:2018knk,Sirunyan:2018zkk,Sirunyan:2018tki}, 
+$\Pbottom\Pbottom\PGt\PGt$~\cite{Aad:2015xja,Sirunyan:2017tqo,Sirunyan:2017djm,Aaboud:2018sfw}, 
+$\Pbottom\Pbottom\PW\PW$~\cite{Sirunyan:2017guj}, 
+and $\PW\PW\PGg\PGg$~\cite{Aaboud:2018ewm}.
+Limits on $\HH$ production obtained from a combination of these analyses have been published by the CMS and ATLAS collaboration 
+in Refs.~\cite{Aad:2015xja,Sirunyan:2017tqo,Sirunyan:2018ayu}.
+
+The paper is structured as follows:
+A a brief overview of the CMS detector is given in Section~\ref{sec:detector}.
+In Section~\ref{sec:datasets}, we detail the datasets and simulation samples used.
+The reconstruction of electrons, muons, $\tauh$, and jets,
+as well as of different kinematic observables is detailed in Section~\ref{sec:eventReconstruction}.
+This is followed by a description, in Section~\ref{sec:eventSelection}, of the event selection criteria applied in the seven channels that are included in the analysis.
+The multi-variate methods that we use to distinguish the $\PHiggs\PHiggs$ signal from backgrounds are detailed in Section~\ref{sec:analysisStrategy}.
+The estimation of backgrounds is described in Section~\ref{sec:backgroundEstimation},
+followed by a description of the relevant systematic uncertainties in Section~\ref{sec:systematicUncertainties}.
+The statistical procedure used to extract the $\HH$ production rate and the results obtained by our analysis are presented in Section~\ref{sec:results}.
+The paper concludes with a summary in Section~\ref{sec:summary}.
