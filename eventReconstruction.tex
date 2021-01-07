@@ -1,12 +1,91 @@
 \section{Event reconstruction}
 \label{sec:eventReconstruction}
 
-"The pseudorapidity η is determined ..."; "The transverse momentum \pt with respect to the beam axis ...", and then henceforth use the symbol. Use the analogous procedure for the other variables: "The polar (azimuthal) angle ϑ (φ) with respect to the counterclockwise beam axis ..."
+The CMS particle-flow (PF) algorithm~\cite{Sirunyan:2017ulk} reconstructs each individual particle in an event,
+using an optimized combination of information from the various elements of the CMS detector.
+The particles are subsequently classified into five mutually exclusive categories: 
+electrons, muons, photons, and charged and neutral hadrons.
 
+Electrons are reconstructed within the geometric acceptance of the tracking detectors, $\abs{\eta} < 2.5$,
+by combining the information from tracker and ECAL~\cite{Khachatryan:2015hwa}
+Their identification is based on an MVA algorithm, which combines observables sensitive 
+to: the matching of measurements of the electron energy and direction obtained from the tracker and the calorimeter;
+the compactness of the electron cluster;
+the bremsstrahlung emitted along the electron trajectory;
+and the isolation of the electron with respect to other particles.
+Details of the algorithm are given in Ref.~\cite{Sirunyan:2020icl}.
+Electrons passing a loose (tight) selection on the output of the MVA algorithm are referred to as ``fakeable'' (``tight'') electrons.
+The selection thresholds have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to achieve a higher electron identification efficiency.
+Electron candidates resulting from photon conversions are removed by requiring 
+that the track features no missing hits in the innermost layers of the silicon tracker and by vetoing candidates that are matched to a reconstructed conversion vertex.
+In the \twoLeptonssZeroTau channel, further electron selection criteria are applied,
+which demand the consistency among three independent measurements of the electron charge~\cite{Khachatryan:2015hwa}.
 
+The reconstruction of muons is based on linking track segments reconstructed in the silicon tracker 
+to hits in the gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid~\cite{Sirunyan:2018}.
+They are identified using an MVA algorithm~\cite{Sirunyan:2020icl}, which combines observables sensitive 
+to: the energy deposits associated to the muon in the ECAL and HCAL;
+the hits and track segments reconstructed in the gas-ionization detectors located outside the solenoid,
+the quality of the spatial matching between the track segments reconstructed in the silicon tracker and in the gas-ionization detectors;
+and the isolation of the muon with respect to other particles.
+Muons passing a loose (tight) selection on the MVA discriminant are referred to as ``fakeable'' (``tight'') muons.
+The selection thresholds have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to increase the muon identification efficiency.
+In the \twoLeptonssZeroTau channel, the uncertainty in the curvature of the muon track is demanded to be less than $20\%$
+to ensure a high-quality charge measurement.
 
+Hadronic decays of $\PGt$ leptons are identified by the ``hadrons-plus-strips'' (HPS) algorithm~\cite{Sirunyan:2018pgf}.
+The algorithm reconstructs individual hadronic decay modes of the $\PGt$ lepton,
+by combining the charged hadrons reconstructed by the PF algorithm with neutral pions.
+The latter are reconstructed by clustering the electrons and photons reconstructed by the PF algorithm into rectangular strips,
+which are narrow in $\eta$ but wide in $\phi$ direction.
+The strips account for the sizable probability for photons originating from neutral pion decays
+to convert into an electron-positron pair when traversing the silicon tracker.
+The conversions have the effect of broadening the energy deposits associated to these photons in the ECAL,
+as the electrons and positrons produced in these conversions are bent in opposite azimuthal directions by the magnetic field
+and may further emit bremsstrahlung photons while traversing the tracker.
+The decay modes considered in this analysis are:
+$\PGt^{-} \to \Ph^{-}\Pnut$, $\PGt^{-} \to \Ph^{-}\Ppizero\Pnut$, $\PGt^{-} \to \Ph^{-}\Ppizero\Ppizero\Pnut$, 
+$\PGt^{-} \to \Ph^{-}\Ph^{+}\Ph^{-}\Pnut$, and $\PGt^{-} \to \Ph^{-}\Ph^{+}\Ph^{-}\Ppizero\Pnut$
+(and analogous for the charge-conjugate decays),
+where the symbols $\Ph^{-}$ and $\Ph^{+}$ denotes either a charged pion or a charged kaon.
+The identification of $\tauh$ is performed by the ``DeepTau'' algorithm~\cite{CMS-DP-2019-033}.
+The algorithm is based on a convolutional ANN~\cite{lecun1989},
+which uses as input a set of $42$ high-level observables in combination with low-level information obtained from the silicon tracker, the electromagnetic and hadronic calorimeters, and the muon detectors.
+The former comprise the $\pt$, $\eta$, $\phi$, and mass of the $\tauh$ candidate; the reconstructed $\tauh$ decay mode;
+observables that quantify the isolation of the $\tauh$ with respect to charged and neutral particles;
+as well as observables that provide sensitivity to the small distance that a $\Pgt$ lepton typically traverses between its production and decay.
+The low-level information quantifies the particle activity within two $\eta \times \phi$ grids, centered on the direction of the $\tauh$ candidate,
+an ``inner'' grid of size $0.2 \times 0.2$, filled with cells of size $0.02 \times 0.02$,
+and an ``outer'' grid of size $0.5 \times 0.5$ (partially overlapping with the inner grid) and cells of size $0.05 \times 0.05$.
+The $\tauh$ considered in this analysis are required to satisfy the conditions $\pt > 20\GeV$ and $\abs{\eta} < 2.3$ 
+and to pass a selection on the output of the convolutional ANN.
+The selection on the output varies by analysis channel, targeting different efficiency and purity levels.
+We refer to the different selection thresholds as very-loose, loose, medium, and tight $\tauh$ working-points (WPs).
 
+Jets are reconstructed using the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} with a distance parameter of $0.4$,
+using the particles reconstructed by the PF algorithm as input.
+Their momentum is determined as the vectorial sum of all particle momenta in the jet, 
+and is found from simulation to be, on average, within $5$ to $10\%$ of the true momentum over the whole $\pt$ spectrum and detector acceptance.
+Additional $\Pp\Pp$ interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum. 
+To mitigate this effect, charged particles identified to be originating from pileup vertices are discarded and an offset correction is applied to correct for remaining contributions. 
+Jet energy corrections are derived from simulation to bring the measured response of jets to that of particle level jets on average. 
+In situ measurements of the momentum balance in dijet, $\text{photon} + \text{jet}$, $\PZ + \text{jet}$, and multijet events 
+are used to account for any residual differences in the jet energy scale between data and simulation~\cite{Khachatryan:2016kdb}. 
+The jet energy resolution amounts typically to $15$--$20\%$ at $30\GeV$, $10\%$ at $100\GeV$, and $5\%$ at $1\TeV$~\cite{Khachatryan:2016kdb}. 
+Additional selection criteria are applied to each jet to remove jets potentially dominated by anomalous contributions from various subdetector components or reconstruction failures.
+The jets considered in this analysis are required to satisfy the conditions $\pt > 25\GeV$ and $\abs{\eta} < 5.0$.
 
-For each event, hadronic jets are clustered from these reconstructed particles using the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} with a distance parameter of 0.4. Jet momentum is determined as the vectorial sum of all particle momenta in the jet, and is found from simulation to be, on average, within 5 to 10\% of the true momentum over the whole \pt spectrum and detector acceptance. Additional proton-proton interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum. To mitigate this effect, charged particles identified to be originating from pileup vertices are discarded and an offset correction is applied to correct for remaining contributions. Jet energy corrections are derived from simulation to bring the measured response of jets to that of particle level jets on average. In situ measurements of the momentum balance in dijet, $\text{photon} + \text{jet}$, $\PZ + \text{jet}$, and multijet events are used to account for any residual differences in the jet energy scale between data and simulation~\cite{Khachatryan:2016kdb}. The jet energy resolution amounts typically to 15--20\% at 30\GeV, 10\% at 100\GeV, and 5\% at 1\TeV~\cite{Khachatryan:2016kdb}. Additional selection criteria are applied to each jet to remove jets potentially dominated by anomalous contributions from various subdetector components or reconstruction failures. 
+Jets reconstructed within the region $\abs{\eta} < 2.4$ and originating from the hadronization of bottom quarks
+are identified by the ``DeepJet'' algorithm~\cite{CMS-DP-2017-013}.
+The algorithm exploits observables related to the long lifetime of $\Pbottom$ hadrons 
+as well as to the higher particle multiplicity and mass of $\Pbottom$ jets compared to light-quark and gluon jets.
+The properties of charged and neutral particle constituents of the jet as well as of secondary vertices reconstructed within the jet
+are used as inputs to a convolutional ANN.
+Two different selections on the output of the algorithm, referred to as loose and tight WPs, are employed in this analysis, 
+for the purpose of vetoing events containing $\Pbottom$ jets.
+These selections correspond to $\Pbottom$ jet selection efficiencies of $84$ and $70\%$,
+while the respective mistag rates for light-quark and gluon jets amount to $11$ and $1.1\%$.
 
-The missing transverse momentum vector \ptvecmiss is computed as the negative vector sum of the transverse momenta of all the PF candidates in an event, and its magnitude is denoted as \ptmiss~\cite{Sirunyan:2019kia}. The \ptvecmiss is modified to account for corrections to the energy scale of the reconstructed jets in the event. 
+The missing transverse momentum vector \ptvecmiss is computed as the negative vector sum of the transverse momenta of all the particles reconstructed by the PF algorithm in an event, 
+and its magnitude is denoted as \ptmiss~\cite{Sirunyan:2019kia}. 
+The \ptvecmiss is modified to account for corrections to the energy scale of the reconstructed jets in the event. 
