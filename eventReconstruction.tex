@@ -5,6 +5,7 @@ The CMS particle-flow (PF) algorithm~\cite{Sirunyan:2017ulk} reconstructs each i
 using an optimized combination of information from the various elements of the CMS detector.
 The particles are subsequently classified into five mutually exclusive categories: 
 electrons, muons, photons, and charged and neutral hadrons.
+These particles are then used to reconstruct hadronic $\PGt$ decays, jets, and the missing transverse momentum in the event.
 
 Electrons are reconstructed within the geometric acceptance of the tracking detectors, $\abs{\eta} < 2.5$,
 by combining the information from tracker and ECAL~\cite{Khachatryan:2015hwa}
@@ -59,8 +60,8 @@ an ``inner'' grid of size $0.2 \times 0.2$, filled with cells of size $0.02 \tim
 and an ``outer'' grid of size $0.5 \times 0.5$ (partially overlapping with the inner grid) and cells of size $0.05 \times 0.05$.
 The $\tauh$ considered in this analysis are required to satisfy the conditions $\pt > 20\GeV$ and $\abs{\eta} < 2.3$ 
 and to pass a selection on the output of the convolutional ANN.
-The selection on the output varies by analysis channel, targeting different efficiency and purity levels.
-We refer to the different selection thresholds as very-loose, loose, medium, and tight $\tauh$ working-points (WPs).
+Two different selections on the output are used in the analysis.
+The $\tauh$ passing the loose (tight) selection are referred to as the ``fakeable'' (``tight'') $\tauh$.
 
 Jets are reconstructed using the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma} with a distance parameter of $0.4$,
 using the particles reconstructed by the PF algorithm as input.
