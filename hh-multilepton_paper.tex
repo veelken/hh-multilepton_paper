@@ -7,13 +7,22 @@
 \ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
 \ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom\xspace}}{\providecommand{\cmsRight}{right\xspace}}
 
-\newcommand{\metHT}{\ensuremath{H_{\mathrm{T}}^\text{miss}}\xspace}
-\newcommand{\metLD}{\ensuremath{L_\mathrm{D}}\xspace}
+%% Renew particle names that don't work locally - AWB 2021.01.15
+%% Copied from utils/general/ptdr-definitions.sty locally and in
+%% https://www.overleaf.com/project/5bcf3ecf38a0711f4a953f85
+\renewcommand{\PGt}{\ensuremath{\tau}\xspace} % tau lepton
+\renewcommand{\Pgt}{\PGt}
+\renewcommand{\PQt}{\ensuremath{\cmsSymbolFace{t}}\xspace} % top quark
+\renewcommand{\PAQt}{\ensuremath{\overline{\cmsSymbolFace{t}}}\xspace} % anti-top quark
+\renewcommand{\PW}{\ensuremath{\cmsSymbolFace{W}}\xspace} % W boson
+\renewcommand{\PZ}{\ensuremath{\cmsSymbolFace{Z}}\xspace} % Z boson
+\renewcommand{\PH}{\ensuremath{\cmsSymbolFace{H}}\xspace} % Higgs boson
 
-\renewcommand{\mT}{\ensuremath{m_\mathrm{T}}\xspace}
-\newcommand{\mTprime}{\ensuremath{m^{'}_\mathrm{T}}\xspace}
-
+%% More particle definitions
 \renewcommand{\tauh}{\ensuremath{\Pgt_{\mathrm{h}}}\xspace}
+\newcommand{\tautau}{\ensuremath{\Pgt\Pgt}\xspace}
+\newcommand{\lep}{\ensuremath{\ell}\xspace}
+\newcommand{\leplep}{\ensuremath{\ell\ell}\xspace}
 \newcommand{\Plepton}{\ensuremath{\ell}\xspace}
 \newcommand{\PLepton}{\ensuremath{\ell}\xspace}
 \newcommand{\Ppizero}{\ensuremath{\Pgpz}\xspace}
@@ -46,17 +55,60 @@
 \newcommand{\ttZ}{\ensuremath{\Ptop\APtop\PZ}\xspace}
 \newcommand{\X}{\ensuremath{\textrm{X}}\xspace}
 
+%% Common luminosity quantities
+\newcommand{\fb}{\ensuremath{\text{fb}}\xspace}
+\renewcommand{\fbinv}{\ensuremath{\fb^{-1}}\xspace}
+\newcommand{\pb}{\ensuremath{\text{pb}}\xspace}
+\renewcommand{\pbinv}{\ensuremath{\pb^{-1}}\xspace}
+
+%% Signal final states
+\newcommand{\WWWW}{\ensuremath{\PW\PW\PW\PW}\xspace}
+\newcommand{\WWtt}{\ensuremath{\PW\PW\Pgt\Pgt}\xspace}
+\newcommand{\tttt}{\ensuremath{\Pgt\Pgt\Pgt\Pgt}\xspace}
+
+%% Common objects from decays
 \renewcommand{\ss}{\ensuremath{\text{ss}}\xspace}
 \newcommand{\jet}{\ensuremath{\mathrm{j}}\xspace}
 \newcommand{\bjet}{\ensuremath{\mathrm{b}}\xspace}
 \newcommand{\jj}{\ensuremath{\mathrm{jj}}\xspace}
 \newcommand{\vis}{\ensuremath{\text{vis}}\xspace}
 
-\newcommand{\fb}{\ensuremath{\text{fb}}\xspace}
-\renewcommand{\fbinv}{\ensuremath{\fb^{-1}}\xspace}
-\newcommand{\pb}{\ensuremath{\text{pb}}\xspace}
-\renewcommand{\pbinv}{\ensuremath{\pb^{-1}}\xspace}
+%% Event categories
+\newcommand{\zeroLeptonFourTau}{\ensuremath{4\tauh}\xspace}
+\newcommand{\oneLeptonThreeTau}{\ensuremath{1\Plepton + 3\tauh}\xspace}
+\newcommand{\twoLeptonssZeroTau}{\ensuremath{2\Plepton\ss}\xspace}
+\newcommand{\twoLeptonTwoTau}{\ensuremath{2\Plepton + 2\tauh}\xspace}
+\newcommand{\threeLeptonZeroTau}{\ensuremath{3\Plepton}\xspace}
+\newcommand{\threeLeptonOneTau}{\ensuremath{3\Plepton + 1\tauh}\xspace}
+\newcommand{\fourLeptonZeroTau}{\ensuremath{4\Plepton}\xspace}
+\newcommand{\threeLeptonCR}{\ensuremath{3\Plepton\textrm{~CR}}\xspace}
+\newcommand{\fourLeptonCR}{\ensuremath{4\Plepton\textrm{~CR}}\xspace}
 
+\newcommand{\llss}  {\twoLeptonssZeroTau}
+\newcommand{\lllnot}{\threeLeptonZeroTau}
+\newcommand{\llll}  {\fourLeptonZeroTau}
+\newcommand{\lllt}  {\threeLeptonOneTau}
+\newcommand{\lltt}  {\twoLeptonTwoTau}
+\newcommand{\lttt}  {\oneLeptonThreeTau}
+\newcommand{\tttt}  {\zeroLeptonFourTau}
+
+%% Particle decays
+\newcommand{\Zgll}{\ensuremath{\PZ/\Pggx \to \Plepton\Plepton}\xspace}
+\newcommand{\Zgee}{\ensuremath{\PZ/\Pggx \to \Pe\Pe}\xspace}
+\newcommand{\Zgmm}{\ensuremath{\PZ/\Pggx \to \Pgm\Pgm}\xspace}
+\newcommand{\Zgtt}{\ensuremath{\PZ/\Pggx \to \Pgt\Pgt}\xspace}
+\newcommand{\Zll}{\ensuremath{\PZ \to \Plepton\Plepton}\xspace}
+\newcommand{\Zee}{\ensuremath{\PZ \to \Pe\Pe}\xspace}
+\newcommand{\Zmm}{\ensuremath{\PZ \to \Pgm\Pgm}\xspace}
+\newcommand{\Ztt}{\ensuremath{\PZ \to \Pgt\Pgt}\xspace}
+
+%% Reconstructed quantities
+\newcommand{\metHT}{\ensuremath{H_{\mathrm{T}}^\text{miss}}\xspace}
+\newcommand{\metLD}{\ensuremath{L_\mathrm{D}}\xspace}
+\renewcommand{\mT}{\ensuremath{m_\mathrm{T}}\xspace}
+\newcommand{\mTprime}{\ensuremath{m^{'}_\mathrm{T}}\xspace}
+
+%% Theoretical constants
 \newcommand{\kappal}{\ensuremath{\kappa_{\lambda}}\xspace}
 \newcommand{\yt}{\ensuremath{\text{y}_{\Ptop}}\xspace}
 \newcommand{\kappat}{\ensuremath{\kappa_{\Ptop}}\xspace}
@@ -70,18 +122,8 @@
 \newcommand{\cgg}{\ensuremath{\text{c}_{2\Pgluon}}\xspace}
 \newcommand{\ctwo}{\ensuremath{\text{c}_{2}}\xspace}
 
-\newcommand{\zeroLeptonFourTau}{\ensuremath{0\Plepton + 4\tauh}\xspace}
-\newcommand{\oneLeptonThreeTau}{\ensuremath{1\Plepton + 3\tauh}\xspace}
-\newcommand{\twoLeptonssZeroTau}{\ensuremath{2\Plepton\ss}\xspace}
-\newcommand{\twoLeptonTwoTau}{\ensuremath{2\Plepton + 2\tauh}\xspace}
-\newcommand{\threeLeptonZeroTau}{\ensuremath{3\Plepton}\xspace}
-\newcommand{\threeLeptonOneTau}{\ensuremath{3\Plepton + 1\tauh}\xspace}
-\newcommand{\fourLeptonZeroTau}{\ensuremath{4\Plepton}\xspace}
-\newcommand{\threeLeptonCR}{\ensuremath{3\Plepton\textrm{~CR}}\xspace}
-\newcommand{\fourLeptonCR}{\ensuremath{4\Plepton\textrm{~CR}}\xspace}
+%% End definitions
 
-\newcommand{\Zmm}{\ensuremath{\PZ/\Pggx \to \Pgm\Pgm}\xspace}
-\newcommand{\Zee}{\ensuremath{\PZ/\Pggx \to \Pe\Pe}\xspace}
 
 \newlength\cmsTabSkip\setlength{\cmsTabSkip}{1ex}
 
