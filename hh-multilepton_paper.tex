@@ -140,21 +140,22 @@
 \date{\today}
 
 \abstract{
-  The results of a search for Higgs ($\textrm{H}$) boson pair production in final states with electrons, muons, and hadronically decaying $\tau$ leptons is presented.
+  The results of a search for Higgs ($\textrm{H}$) boson pair production in final states with multiple electrons, muons, or hadronically decaying $\tau$ leptons is presented.
   The search is based on proton-proton collision data recorded by the CMS experiment at $\sqrt{s} = 13$~\TeV center-of-mass energy,
   corresponding to an integrated luminosity of $137.2$~fb$^{-1}$.
-  Seven distinct final states, distinguished by the multiplicity of electrons and muons, collectively denoted by the symbol $\ell$,
-  and of hadronically decaying $\tau$ leptons, denoted by the symbol $\tau_{\textrm{h}}$, are included in the analysis:
-  $0\ell + 4\tauh$, $1\ell + 3\tau_{\textrm{h}}$, $2\ell$ of same-sign charge, $2\ell + 2\tau_{\textrm{h}}$, $3\ell$, $3\ell + 1\tau_{\textrm{h}}$, and $4\ell$.
-  These final states target $\textrm{H}$ boson pair ($\textrm{HH}$) production in events in which the $\PHiggs$ boson pair decays into either $\textrm{WWWW}$, $\textrm{WW}\tau\tau$, or $\tau\tau\tau\tau$
+  Seven distinct event categories, distinguished by the multiplicity of electrons or muons ($\ell$)
+  and hadronically decaying $\tau$ leptons ($\tau_{\textrm{h}}$) are included in the analysis:
+  %% $0\ell + 4\tauh$, $1\ell + 3\tau_{\textrm{h}}$, $2\ell$ of same-sign charge, $2\ell + 2\tau_{\textrm{h}}$, $3\ell$, $3\ell + 1\tau_{\textrm{h}}$, and $4\ell$.
+  $2\ell$ of same charge, $3\ell$, $4\ell$, $3\ell + 1\tau_{\textrm{h}}$, $2\ell + 2\tau_{\textrm{h}}$, $1\ell + 3\tau_{\textrm{h}}$, and $4\tauh$.
+  These final states target Higgs boson pair ($\textrm{HH}$) production in which the pair decays into either $\textrm{WWWW}$, $\textrm{WW}\tau\tau$, or $\tau\tau\tau\tau$,
   and the $\textrm{W}$ bosons and $\tau$ leptons subsequently decay either leptonically or hadronically.
-  No evidence for a signal is found in the data and upper limits on the cross section for non-resonant as well as resonant $\textrm{HH}$ production are set.
-  For the case of non-resonant $\textrm{HH}$ production with event kinematics equal to the kinematics expected in the Standard Model (SM),
-  the observed (expected) upper limit on the cross section, at $95\%$ confidence level (CL), amounts to $XX$ ($XX$) times the rate expected in the SM.
-  The results of the search are used to exclude regions in the plane of the $\textrm{H}$ boson coupling to the top quark and of the trilinear $\textrm{H}$ boson self-coupling.
-  Assuming $\yt$ has the value expected in the SM, the trilinear $\PHiggs$ boson self-coupling is constrained to be within the interval $X.X < \lambda < X.X$.
-  For resonant $\HH$ production, the observed (expected) limits on the $\HH$ production cross section range from $XX$ to $XX$ ($XX$ to $XX$)~\pb at $95\%$ CL, 
-  depending on the mass of the resonance and on whether the resonance has spin $0$ or spin $2$.
+  No evidence for a signal is found in the data, and upper limits on the cross section for non-resonant as well as resonant $\textrm{HH}$ production from heavy particle decays are set.
+  For non-resonant $\textrm{HH}$ production with event kinematics predicted by the Standard Model (SM),
+  the observed (expected) upper limit on the production rate at $95\%$ confidence level (CL) is $XX$ ($XX$) times the SM cross section.
+  The results also exclude regions in the plane of the $\textrm{H}$ boson coupling to the top quark ($\mathrm{y}_{\mathrm{t}}$) and of the trilinear $\textrm{H}$ boson self-coupling ($\lambda$).
+  Assuming $\mathrm{y}_{\mathrm{t}}$ has the magnitude expected in the SM, the Higgs self-coupling is constrained to be in the interval $X.X < \lambda < X.X$.
+  The observed (expected) limits on resonant $\HH$ production cross section range from $XX$ to $XX$ ($XX$ to $XX$)~\pb at $95\%$ CL, 
+  depending on the heavy decaying particle mass and spin (0 or 2).
 }
 
 \hypersetup{
@@ -168,13 +169,13 @@ pdfkeywords={CMS, physics}
 
 \include{introduction}
 \include{detector}
-\include{datasets}
+\include{datasets} % AWB
 \include{eventReconstruction}
-\include{eventSelection}
+\include{eventSelection} % AWB
 \include{analysisStrategy}
 \include{backgroundEstimation}
-\include{systematicUncertainties}
-\include{results}
+\include{systematicUncertainties} % AWB
+\include{results} % AWB
 \include{summary}
 
 \newpage
