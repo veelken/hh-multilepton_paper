@@ -1,5 +1,130 @@
 \section{Data samples and Monte Carlo simulation}
 \label{sec:datasets}
 
+The data analyzed represent a total of 137.2~\fbinv of proton-proton collisions
+collected by the CMS detector in Run~2, and certified to have all detector components
+working properly: 35.9~\fbinv in 2016, 41.5~\fbinv in 2017, and 59.7~\fbinv in 2018.
+The two-tier CMS ``trigger'' system selects one event of interest out of every thirty
+thousand collision events to save for closer examination, based on the presence of
+specific combinations of reconstructed objects.~\cite{CMS_trigger}  This analysis
+uses triggers requiring one or more electrons, muons, or hadronically-decaying \Pgt
+leptons to be associated with the leading primary vertex. The exact triggers and their
+thresholds varied slightly from year to year, due to changing luminosity and detector
+conditions, as well as improvements to the trigger algorithms.  The trigger \pt and
+$\eta$ requirements for each year are shown in Table~\ref{tab:HH_triggers}.  All
+triggers included identification and isolation requirements on the leptons as well.
 
+\begin{table}[!h]
+\begin{center}
 
+%% \begin{tabular}{|l|c|c|c|}
+%% \hline
+%% Trigger              & Electron selection  & Muon selection & Tau selection \\
+%% \hline
+%% Single electron      & $\pt > 25$~GeV (and $|\eta| < 2.1$) or $27$~GeV / $32 -- 35$~GeV / $32$~GeV (2016/17/18) &  &  \\
+%% Single muon          &  & $\pt > 22 -- 24 / 24 -- 27 / 24$~GeV (2016/17/18) &  \\ 
+%% Double electron      & $\pt > 23$ and $12$~GeV &  &  \\
+%% Electron + muon      & $\pt > 23$ or $8 / 12 / 12$~GeV (2016/17/18) & $\pt > 8$ or $23$~GeV &  \\
+%% Double muon          &  & $\pt > 17$ and $8$~GeV &  \\
+%% Electron + tau       & $\pt > 24$~GeV and $|\eta| < 2.1$ &  & $\pt > 20 -- 30 / 30 / 30$~GeV and $|\eta| < 2.1$ (2016/17/18) \\
+%% Muon + tau           &  & $\pt > 19 / 20 / 20$~GeV and $|\eta| < 2.1$ (2016/17/18) & $\pt > 20 / 27 / 27$~GeV and $|\eta| < 2.1$ (2016/17/18) \\
+%% Double tau           &  &  & Both $\pt > 35 -- 40$~GeV $|\eta| < 2.1$  \\
+%% Triple electron      & $\pt > 16, 12,$ and $8$~GeV &  &  \\
+%% Two electron + muon  & Both $\pt > 12$~GeV & $\pt > 8$~GeV &  \\
+%% Two muon + electron  & $\pt > 9$~GeV & Both $\pt > 9$~GeV &  \\
+%% Triple muon          &  & $\pt > 12, 10,$ and $5$~GeV &  \\
+\hline
+
+\begin{tabular}{|l|l|}
+\hline
+Trigger          & Object selection (electron $e$, muon $\mu$, and hadronic tau \tauh) \\
+\hline
+Single $e$       & $\pt(e) > 27 / 32 - 35 / 32$~GeV (2016/17/18) \\
+Single $\mu$     & $\pt(\mu) > 22 - 24 / 24 - 27 / 24$~GeV (2016/17/18) \\ 
+Double $e$       & $\pt(e) > 23, 12$~GeV \\
+$e$ + $\mu$      & $\pt(e) > 23$~GeV, $\pt(\mu) > 8$~GeV \\
+$\mu$ + $e$      & $\pt(\mu) > 23$~GeV, $\pt(e) > 8 / 12 / 12$~GeV (2016/17/18) \\
+Double $\mu$     & $\pt(\mu) > 17, 8$~GeV \\
+$e$ + \tauh      & $\pt(e) > 24$~GeV, $\pt(\tauh) > 20 - 30 / 30 / 30$~GeV, $|\eta(e, \tauh)| < 2.1$ (2016/17/18) \\
+$\mu$ + \tauh    & $\pt(\mu) > 19 / 20 / 20$~GeV, $\pt(\tauh) > 20 / 27 / 27$~GeV, $|\eta(\mu, \tauh)| < 2.1$ (2016/17/18) \\
+Double \tauh     & $\pt(\tauh) > 35 - 40, 35 - 40$~GeV, $|\eta(\tauh)| < 2.1$  \\
+Triple $e$       & $\pt(e) > 16, 12, 8$~GeV \\
+Two $e$ + $\mu$  & $\pt(e) > 12, 12$~GeV, $\pt(\mu) > 8$~GeV \\
+Two $\mu$ + $e$  & $\pt(\mu) > 9, 9$~GeV, $\pt(e) > 9$~GeV \\
+Triple $\mu$     & $\pt(\mu) > 12, 10, 5$~GeV \\
+\hline
+
+\end{tabular}
+\end{center}
+\caption{
+  Selection requirements on \pt and $\eta$ for lepton-triggered events used in this analysis.  All
+  leptons were additionally required to pass identification, isolation, and vertexing requirements.
+}
+\label{tab:HH_triggers}
+\end{table}
+
+%% TODO: how were events "cross-cleaned" between datasets? (AWB 11.01.21)
+
+Monte Carlo (MC) simulated samples were used to model HH signal events, and a wide range
+of SM background processes which can produce multiple leptons.  Background MC samples
+include those producing a single W or Z boson, two bosons (WW, WZ, ZZ, W$\gamma$, and Z$\gamma$),
+three bosons (WWW, WWZ, WZZ, ZZZ, and WZ$\gamma$), a single Higgs boson (via gluon fusion,
+vector boson fusion, or associated production with a W or Z boson), a single top quark,
+a top anti-top quark pair (\tops), and top quarks associated with one or more bosons (\ttW,
+\ttZ, \ttH, \tHq, and \topHW).  Most samples, including the dominant irreducible WZ and ZZ
+backgrounds, were generated at next-to-leading-order (NLO) and scaled to cross sections
+computed at next-to-next-to-leading-order (NNLO).
+
+A variety of HH signal samples were generated, including Higgs pairs produced via gluon
+fusion (gg) and vector boson fusion (VBF) where both Higgs decay to either WW, ZZ, or \Pgt\Pgt.
+Non-resonant di-Higgs MC samples include SM production, ``box-only'' di-Higgs events with
+the trilinear Higgs self-coupling ($\kappa_{\lambda}$) set to 0, and 12 benchmark models
+from effective field theory (EFT).  These benchmarks represent different combinations of
+$\kappa_{\lambda}$, $\kappa_{t}$, $c_{2}$, $c_{g}$, and $c_{2g}$ values which correspond
+to regions of similar LO kinematics, described in~\cite{Xandra:2016hhBM}.  The parameter
+values are shown in Table~\ref{tab:HH_benchmarks}.  The EFT benchmark samples were
+generated at LO but reweighted using the $aMC@NLO$ model described
+in~\cite{Frixione:2011NLOQCD,Alwall:2014dcshh}.
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|} \hline
+Benchmark & $\kappa_{\lambda}$  & $\kappa_{t}$ & $c_{2}$ & $c_{g}$ &  $c_{2g}$ \\
+\hline
+1         & 7.5                 & 1.0          & -1.0    & 0.0     & 0.0 \\
+2         & 1.0                 & 1.0          &  0.5    & -0.8    & 0.6 \\
+3         & 1.0                 & 1.0          & -1.5    & 0.0     & -0.8 \\
+4         & -3.5                & 1.5          & -3.0    & 0.0     & 0.0 \\
+5         & 1.0                 & 1.0          & 0.0     & 0.8     & -1.0 \\
+6         & 2.4                 & 1.0          & 0.0     & 0.2     & -0.2 \\
+7         & 5.0                 & 1.0          & 0.0     & 0.2     & -0.2 \\
+8         & 15.0                & 1.0          & 0.0     & -1.0    & 1.0 \\
+9         & 1.0                 & 1.0          & 1.0     & -0.6    & 0.6 \\
+10         & 10.0                & 1.5          & -1.0    & 0.0     & 0.0 \\
+11        & 2.4                 & 1.0          & 0.0     & 1.0     & -1.0 \\
+12        & 15.0                & 1.0          & 1.0     & 0.0     & 0.0 \\
+\hline
+SM        & 1.0                 & 1.0          & 0.0     & 0.0     & 0.0 \\
+box       & 0.0                 & 1.0          & 0.0     & 0.0     & 0.0 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+  Parameter values for $\kappa_{\lambda}$, $\kappa_{t}$, $c_{2}$, $c_{g}$, and
+  $c_{2g}$ in MC samples modeling twelve BSM EFT benchmark scenarios, plus SM
+  and ``box-only'' HH production.
+}
+\label{tab:HH_benchmarks}
+\end{table}
+
+Resonant di-Higgs production was simulated at LO for both spin-0 (radion) and spin-2 (graviton)
+scenarios with invariant masses of 250, 260, 270, 280, 300, 320, 350, 400, 450, 500, 550, 600,
+650, 700, 750, 800, 850, 900, and 1000~TeV.
+
+All MC samples were generated using $\textsc{MadGraph5\_aMCatNLO}$~\cite{MadGraph5_aMCatNLO} or
+$\textsc{POWHEG}$ $v2$~\cite{POWHEG1,POWHEG2,POWHEG3}, with parton shower, hadronization
+processes, and \Pgt lepton decays modeled by
+$\textsc{PYTHIA}$~\cite{PYTHIA_CUETP8M1tune_CMS,PYTHIA_CUETP8M2tune_CMS,CP5tune_CMS,PYTHIA_MonashTune}.
+The CMS apparatus was modeled in detail using $\textsc{geant4}$~\cite{geant4}, and simulated events
+were reconstructed identically to data.  Additional collisions were generated with $\textsc{PYTHIA}$ and
+overlaid on all MC events, with weights used to match the collision multiplicity distribution to data.
