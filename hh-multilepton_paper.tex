@@ -7,16 +7,6 @@
 \ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
 \ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom\xspace}}{\providecommand{\cmsRight}{right\xspace}}
 
-%% Renew particle names that don't work locally - AWB 2021.01.15
-%% Copied from utils/general/ptdr-definitions.sty locally and in
-%% https://www.overleaf.com/project/5bcf3ecf38a0711f4a953f85
-\renewcommand{\PGt}{\ensuremath{\tau}\xspace} % tau lepton
-\renewcommand{\Pgt}{\PGt}
-\renewcommand{\PQt}{\ensuremath{\cmsSymbolFace{t}}\xspace} % top quark
-\renewcommand{\PAQt}{\ensuremath{\overline{\cmsSymbolFace{t}}}\xspace} % anti-top quark
-\renewcommand{\PW}{\ensuremath{\cmsSymbolFace{W}}\xspace} % W boson
-\renewcommand{\PZ}{\ensuremath{\cmsSymbolFace{Z}}\xspace} % Z boson
-\renewcommand{\PH}{\ensuremath{\cmsSymbolFace{H}}\xspace} % Higgs boson
 
 %% More particle definitions
 \renewcommand{\tauh}{\ensuremath{\Pgt_{\mathrm{h}}}\xspace}
@@ -47,12 +37,15 @@
 \newcommand{\V}{\ensuremath{\textrm{V}}\xspace}
 \newcommand{\VH}{\ensuremath{\V\PHiggs}\xspace}
 \newcommand{\tH}{\ensuremath{\Ptop\PHiggs}\xspace}
+\newcommand{\tHq}{\ensuremath{\Ptop\PHiggs\PQq}\xspace}
+\newcommand{\tHW}{\ensuremath{\Ptop\PHiggs\PW}\xspace}
 \newcommand{\ttH}{\ensuremath{\Ptop\APtop\PHiggs}\xspace}
-\renewcommand{\ttbar}{\ensuremath{\mathrm{\Ptop\APtop}\text{+jets}}\xspace}
+\renewcommand{\ttbar}{\ensuremath{\mathrm{\Ptop\APtop}}\xspace}
 \newcommand{\tV}{\ensuremath{\Ptop\V}\xspace}
 \newcommand{\ttV}{\ensuremath{\Ptop\APtop\V}\xspace}
 \newcommand{\tZ}{\ensuremath{\Ptop\PZ}\xspace}
 \newcommand{\ttZ}{\ensuremath{\Ptop\APtop\PZ}\xspace}
+\newcommand{\ttW}{\ensuremath{\Ptop\APtop\PW}\xspace}
 \newcommand{\X}{\ensuremath{\textrm{X}}\xspace}
 
 %% Common luminosity quantities
@@ -90,7 +83,7 @@
 \newcommand{\lllt}  {\threeLeptonOneTau}
 \newcommand{\lltt}  {\twoLeptonTwoTau}
 \newcommand{\lttt}  {\oneLeptonThreeTau}
-\newcommand{\tttt}  {\zeroLeptonFourTau}
+\newcommand{\noltttt}{\zeroLeptonFourTau}
 
 %% Particle decays
 \newcommand{\Zgll}{\ensuremath{\PZ/\Pggx \to \Plepton\Plepton}\xspace}
