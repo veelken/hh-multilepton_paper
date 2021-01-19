@@ -47,13 +47,13 @@ Triple $\mu$     & $\pt(\mu) > 12, 10, 5$~GeV \\
 
 %% TODO: how were events "cross-cleaned" between datasets? (AWB 11.01.21)
 
-Monte Carlo (MC) simulated samples were used to model HH signal events, and a wide range
+Monte Carlo (MC) simulated samples were used to model $\PHiggs\PHiggs$ signal events, and a wide range
 of SM background processes which can produce multiple leptons.  Background MC samples
-include those producing a single W or Z boson, two bosons (WW, WZ, ZZ, W$\gamma$, and Z$\gamma$),
-three bosons (WWW, WWZ, WZZ, ZZZ, and WZ$\gamma$), a single Higgs boson (via gluon fusion,
-vector boson fusion, or associated production with a W or Z boson), a single top quark,
-a top anti-top quark pair (\ttbar), and top quarks associated with one or more bosons (\ttW,
-\ttZ, \ttH, \tHq, and \tHW).  Most samples, including the dominant irreducible WZ and ZZ
+include those producing a single $\PW$ or $\PZ$ boson, two bosons ($\PW\PW$, $\PW\PZ$, $\PZ\PZ$, $\PW\Pgg$, and $\PZ\Pgg$),
+three bosons ($\PW\PW\PW$, $\PW\PW\PZ$, $\PW\PZ\PZ$, $\PZ\PZ\PZ$, and $\PW\PZ\Pgg$), a single Higgs boson (via gluon fusion,
+vector boson fusion, or associated production with a $\PW$ or $\PZ$ boson), a single top quark,
+a top anti-top quark pair ($\ttbar$), and top quarks associated with one or more bosons ($\ttW$,
+$\ttZ$, $\ttH$, $\tHq$, and $\tHW$).  Most samples, including the dominant irreducible $\PW\PZ$ and $\PZ\PZ$
 backgrounds, were generated at next-to-leading-order (NLO) and scaled to cross sections
 computed at next-to-next-to-leading-order (NNLO).
 
@@ -62,7 +62,7 @@ fusion (gg) and vector boson fusion (VBF) where both Higgs decay to either WW, Z
 Non-resonant di-Higgs MC samples include SM production, ``box-only'' di-Higgs events with
 the trilinear Higgs self-coupling ($\kappa_{\lambda}$) set to 0, and 12 benchmark models
 from effective field theory (EFT).  These benchmarks represent different combinations of
-$\kappa_{\lambda}$, $\kappa_{t}$, $c_{2}$, $c_{g}$, and $c_{2g}$ values which correspond
+$\kappal$, $\kappat$, $\ctwo$, $\cg$, and $\cgg$ values which correspond
 to regions of similar LO kinematics, described in~\cite{Xandra:2016hhBM}.  The parameter
 values are shown in Table~\ref{tab:HH_benchmarks}.  The EFT benchmark samples were
 generated at LO but reweighted using the $aMC@NLO$ model described
@@ -71,7 +71,7 @@ in~\cite{Frixione:2011NLOQCD,Alwall:2014dcshh}.
 \begin{table}[!h]
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|} \hline
-Benchmark & $\kappa_{\lambda}$  & $\kappa_{t}$ & $c_{2}$ & $c_{g}$ &  $c_{2g}$ \\
+Benchmark & $\kappal$  & $\kappat$ & $\ctwo$ & $\cg$ &  $\cgg$ \\
 \hline
 1         & 7.5                 & 1.0          & -1.0    & 0.0     & 0.0 \\
 2         & 1.0                 & 1.0          &  0.5    & -0.8    & 0.6 \\
@@ -92,8 +92,8 @@ box       & 0.0                 & 1.0          & 0.0     & 0.0     & 0.0 \\
 \end{tabular}
 \end{center}
 \caption{
-  Parameter values for $\kappa_{\lambda}$, $\kappa_{t}$, $c_{2}$, $c_{g}$, and
-  $c_{2g}$ in MC samples modeling twelve BSM EFT benchmark scenarios, plus SM
+  Parameter values for $\kappal$, $\kappat$, $\ctwo$, $\cg$, and
+  $\cgg$ in MC samples modeling twelve BSM EFT benchmark scenarios, plus SM
   and ``box-only'' HH production.
 }
 \label{tab:HH_benchmarks}
