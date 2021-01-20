@@ -1,16 +1,16 @@
 \section{Data samples and Monte Carlo simulation}
 \label{sec:datasets}
 
-The data analyzed represent a total of 137.2~\fbinv of proton-proton collisions
+The data analyzed represent a total of $137.2$~\fbinv of proton-proton collisions
 collected by the CMS detector in Run~2, and certified to have all detector components
-working properly: 35.9~\fbinv in 2016, 41.5~\fbinv in 2017, and 59.7~\fbinv in 2018.
+working properly: $35.9$~\fbinv in 2016, $41.5$~\fbinv in 2017, and $59.7$~\fbinv in 2018.
 The two-tier CMS ``trigger'' system selects one event of interest out of every thirty
 thousand collision events to save for closer examination, based on the presence of
 specific combinations of reconstructed objects.~\cite{CMS_trigger}  This analysis
-uses triggers requiring one or more electrons, muons, or hadronically-decaying \Pgt
+uses triggers requiring one or more electrons, muons, or hadronically-decaying $\Pgt$
 leptons to be associated with the leading primary vertex. The exact triggers and their
 thresholds varied slightly from year to year, due to changing luminosity and detector
-conditions, as well as improvements to the trigger algorithms.  The trigger \pt and
+conditions, as well as improvements to the trigger algorithms.  The trigger $\pt$ and
 $\eta$ requirements for each year are shown in Table~\ref{tab:triggers}.  All
 triggers included identification and isolation requirements on the leptons as well.
 
@@ -19,21 +19,21 @@ triggers included identification and isolation requirements on the leptons as we
 \begin{tabular}{|l|l|}
 
 \hline
-Trigger          & Object selection (electron $e$, muon $\mu$, and hadronic tau \tauh) \\
+Trigger            & Object selection (electron $\Pe$, muon $\Pgm$, and hadronic tau $\tauh$) \\
 \hline
-Single $e$       & $\pt(e) > 27 / 32 - 35 / 32$~GeV (2016/17/18) \\
-Single $\mu$     & $\pt(\mu) > 22 - 24 / 24 - 27 / 24$~GeV (2016/17/18) \\ 
-Double $e$       & $\pt(e) > 23, 12$~GeV \\
-$e$ + $\mu$      & $\pt(e) > 23$~GeV, $\pt(\mu) > 8$~GeV \\
-$\mu$ + $e$      & $\pt(\mu) > 23$~GeV, $\pt(e) > 8 / 12 / 12$~GeV (2016/17/18) \\
-Double $\mu$     & $\pt(\mu) > 17, 8$~GeV \\
-$e$ + \tauh      & $\pt(e) > 24$~GeV, $\pt(\tauh) > 20 - 30 / 30 / 30$~GeV, $|\eta(e, \tauh)| < 2.1$ (2016/17/18) \\
-$\mu$ + \tauh    & $\pt(\mu) > 19 / 20 / 20$~GeV, $\pt(\tauh) > 20 / 27 / 27$~GeV, $|\eta(\mu, \tauh)| < 2.1$ (2016/17/18) \\
-Double \tauh     & $\pt(\tauh) > 35 - 40, 35 - 40$~GeV, $|\eta(\tauh)| < 2.1$  \\
-Triple $e$       & $\pt(e) > 16, 12, 8$~GeV \\
-Two $e$ + $\mu$  & $\pt(e) > 12, 12$~GeV, $\pt(\mu) > 8$~GeV \\
-Two $\mu$ + $e$  & $\pt(\mu) > 9, 9$~GeV, $\pt(e) > 9$~GeV \\
-Triple $\mu$     & $\pt(\mu) > 12, 10, 5$~GeV \\
+Single $\Pe$       & $\pt(\Pe) > 27 / 32 - 35 / 32\GeV$ (2016/17/18) \\
+Single $\Pgm$      & $\pt(\Pgm) > 22 - 24 / 24 - 27 / 24\GeV$ (2016/17/18) \\ 
+Double $\Pe$       & $\pt(\Pe) > 23, 12\GeV$ \\
+$\Pe$ + $\Pgm$     & $\pt(\Pe) > 23\GeV$, $\pt(\Pgm) > 8\GeV$ \\
+$\Pgm$ + $\Pe$     & $\pt(\Pgm) > 23\GeV$, $\pt(\Pe) > 8 / 12 / 12\GeV$ (2016/17/18) \\
+Double $\Pgm$      & $\pt(\Pgm) > 17, 8\GeV$ \\
+$\Pe$ + $\tauh$    & $\pt(\Pe) > 24\GeV$, $\pt(\tauh) > 20 - 30 / 30 / 30$~GeV, $\abs{\eta(\Pe, \tauh)} < 2.1$ (2016/17/18) \\
+$\Pgm$ + $\tauh$   & $\pt(\Pgm) > 19 / 20 / 20\GeV$, $\pt(\tauh) > 20 / 27 / 27$~GeV, $\abs{\eta(\Pgm, \tauh)} < 2.1$ (2016/17/18) \\
+Double $\tauh$     & $\pt(\tauh) > 35 - 40, 35 - 40\GeV$, $\abs{\eta(\tauh)} < 2.1$  \\
+Triple $\Pe$       & $\pt(\Pe) > 16, 12, 8\GeV$ \\
+Two $\Pe$ + $\Pgm$ & $\pt(\Pe) > 12, 12\GeV$, $\pt(\Pgm) > 8\GeV$ \\
+Two $\Pgm$ + $\Pe$ & $\pt(\Pgm) > 9, 9\GeV$, $\pt(\Pe) > 9\GeV$ \\
+Triple $\Pgm$      & $\pt(\Pgm) > 12, 10, 5\GeV$ \\
 \hline
 
 \end{tabular}
@@ -82,7 +82,7 @@ Benchmark & $\kappal$  & $\kappat$ & $\ctwo$ & $\cg$ &  $\cgg$ \\
 7         & 5.0                 & 1.0          & 0.0     & 0.2     & -0.2 \\
 8         & 15.0                & 1.0          & 0.0     & -1.0    & 1.0 \\
 9         & 1.0                 & 1.0          & 1.0     & -0.6    & 0.6 \\
-10         & 10.0                & 1.5          & -1.0    & 0.0     & 0.0 \\
+10        & 10.0                & 1.5          & -1.0    & 0.0     & 0.0 \\
 11        & 2.4                 & 1.0          & 0.0     & 1.0     & -1.0 \\
 12        & 15.0                & 1.0          & 1.0     & 0.0     & 0.0 \\
 \hline
