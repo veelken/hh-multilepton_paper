@@ -1,2 +1,60 @@
 \section{Results}
 \label{sec:results}
+
+The full set of data from 2016, 2017, and 2018 in all selection categories
+is tested against $\HH$ production hypotheses from multiple models, described
+in Section~\ref{sec:introduction}: the Standard Model prediction;
+variations of the SM coupling constant modifiers
+$\kappal$, $\kappat$, $\kappaV$, $\kappaVV$, and [TODO 5th?];
+BSM effective couplings $\cg$, $\cgg$, and $\ctwo$;
+and resonant production from the decay of spin-0 or
+spin-2 particles with masses between 250 and $1000\GeV/c^{2}$.
+In each case, the entire dataset is fit simultaneously to a model
+composed of the background prediction and the $\HH$ signal hypothesis
+under consideration.  The SM ``signal strength'' parameter is defined as
+$\mu = \sigma(\HH)_{\textrm{best fit}} / \sigma(\HH)_{\textrm{SM}}$,
+and modifies the expected signal yield by the same proportion in each category.
+Variations in the $\kappa$ modifiers affect the signal yields in each cateogry
+separately, and change the BDT output discriminant shape for $\HH$ events.
+The twelve points spanning combinations of $\cg$, $\cgg$, and $\ctwo$ values in
+the EFT phase space each carry different signal kinematics, so the $\HH$ cross
+section $\sigma$ for each point is measured separately.  Similarly, signal efficiency
+and BDT output vary dramatically for different resonant masses, so each mass and
+spin value has its production cross section measured separately.  The SM signal
+strength and $\kappa$ measurements are performed with $\ggHH$ and $\qqHH$ signal
+MC simulation generated at NLO, using the SM ``node'' of the BDT training in
+each event category to produce the final disciminator output distribution.
+Each EFT point and resonant hypothesis has its own dedicated BDT node, and
+is measured using a unique BDT output distribution in LO $\ggHH$ MC simulation.
+[TODO: describe choice of BDT binning.]
+
+The SM signal strength is measured using a profile likelihood test
+statistic%%~\cite{Cowan:2010js},
+with systematic uncertainties treated as
+nuisance parameters $\theta$ in a modified frequentist
+approach.%%~\cite{CMS-NOTE-2011-005}
+The likelihood ratio for a fixed ``test'' signal strength value $\mu$ is:
+
+\begin{linenomath}
+\begin{equation*}
+  \begin{aligned}
+    q_{\mu}  &  = -2 \Delta \ln \mathcal{L} = \ln \frac{\mathcal{L}(\mathrm{data}|\mu,\hat{\theta}_{\mu})}{\mathcal{L}(\mathrm{data}|\hat{\mu},\hat{\theta})},
+  \end{aligned}
+\end{equation*}
+\end{linenomath}
+
+where $\hat{\mu}$ and $\hat{\theta}$ are the signal strength and nuisance
+paramter values which give the maximum value of likelihood $\mathcal{L}$
+for the given set of data, and $\hat{\theta}_{\mu}$ are the nuisance
+parameter values which maximize $\mathcal{L}$ for the fixed $\mu$ value.
+The 95\% confidence interval is bounded by values of $\mu$ for which
+$q_{\mu} = 1.96$, close to 2 standard deviations from the global best-fit value.
+The SM coupling strength modifiers and and BSM scenario cross sections
+are measured by profiling values of $\kappa$ and $\sigma$, respectively,
+relative to $\hat{\kappa}$ and $\hat{\sigma}$.
+Theoretical and experimental uncertainties affecting the signal and
+background yields or discriminator output distributions are fully
+correlated across all years, event categories, and discriminant bins,
+except as noted in Section~\ref{sec:systematicUncertainties}.
+
+
