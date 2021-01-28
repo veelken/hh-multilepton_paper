@@ -57,16 +57,15 @@ $\ttZ$, $\ttH$, $\tHq$, and $\tHW$).  Most samples, including the dominant irred
 backgrounds, were generated at next-to-leading-order (NLO) and scaled to cross sections
 computed at next-to-next-to-leading-order (NNLO).
 
-A variety of HH signal samples were generated, including Higgs pairs produced via gluon
-fusion (gg) and vector boson fusion (VBF) where both Higgs decay to either WW, ZZ, or \tautau.
+A variety of $\PHiggs\PHiggs$ signal samples were generated, including $\PHiggs$ boson pairs produced via gluon
+fusion and vector boson fusion where both $\PHiggs$ bosons decay to either $\PW\PW$, $\PZ\PZ$, or $\PGt\PGt$.
 Non-resonant di-Higgs MC samples include SM production, ``box-only'' di-Higgs events with
-the trilinear Higgs self-coupling ($\kappa_{\lambda}$) set to 0, and 12 benchmark models
-from effective field theory (EFT).  These benchmarks represent different combinations of
+the trilinear Higgs self-coupling ($\kappa_{\lambda}$) set to zero, and $12$ benchmark scenarios
+in the EFT approach.  These benchmarks represent different combinations of
 $\kappal$, $\kappat$, $\ctwo$, $\cg$, and $\cgg$ values which correspond
 to regions of similar LO kinematics, described in~\cite{Carvalho:2015ttv}.  The parameter
 values are shown in Table~\ref{tab:HH_benchmarks}.  The EFT benchmark samples were
-generated at LO but reweighted using the $aMC@NLO$ model described
-in~\cite{Frixione:2011NLOQCD,Alwall:2014hca}.
+generated at LO but are reweighted to NLO accuracy using the results of Ref.~\cite{Buchalla:2018yce}.
 
 \begin{table}[!h]
 \begin{center}
@@ -93,19 +92,19 @@ box       & 0.0        & 1.0       & 0.0     & 0.0   & 0.0  \\
 \end{center}
 \caption{
   Parameter values for $\kappal$, $\kappat$, $\ctwo$, $\cg$, and
-  $\cgg$ in MC samples modeling twelve BSM EFT benchmark scenarios, plus SM
+  $\cgg$ in MC samples modeling twelve EFT benchmark scenarios, plus SM
   and ``box-only'' HH production.
 }
 \label{tab:HH_benchmarks}
 \end{table}
 
 Resonant di-Higgs production was simulated at LO for both spin-0 (radion) and spin-2 (graviton)
-scenarios with invariant masses of 250, 260, 270, 280, 300, 320, 350, 400, 450, 500, 550, 600,
-650, 700, 750, 800, 850, 900, and 1000~TeV.
+scenarios with invariant masses of $250$, $260$, $270$, $280$, $300$, $320$, $350$, $400$, $450$, $500$, $550$, $600$,
+$650$, $700$, $750$, $800$, $850$, $900$, and $1000\TeV$.
 
 All MC samples were generated using $\textsc{MadGraph5\_aMCatNLO}$~\cite{Alwall:2014hca} or
 $\textsc{POWHEG}$ $v2$~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2010xd}, with parton shower, hadronization
-processes, and $\Pgt$ lepton decays modeled by
+processes, and $\PGt$ lepton decays modeled by
 $\textsc{PYTHIA}$~\cite{PYTHIA_CUETP8M1tune_CMS,PYTHIA_CUETP8M2tune_CMS,Sirunyan:2019dfx,PYTHIA_MonashTune}.
 The CMS apparatus was modeled in detail using $\textsc{geant4}$~\cite{Agostinelli:2002hh}, and simulated events
 were reconstructed identically to data.  Additional collisions were generated with $\textsc{PYTHIA}$ and
