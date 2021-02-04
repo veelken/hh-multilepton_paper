@@ -1,92 +1,81 @@
 \section{Systematic uncertainties}
 \label{sec:systematicUncertainties}
 
-When measuring the $\HH$ cross section for various signal models,
-there are multiple sources of systematic uncertainty which affect
-the predicted yields and BDT discriminator output shapes for different
-sources of signal and background.
-These uncertainties are either theoretical, affecting the predicted cross
-section or decay kinematics of the collision process, or experimental,
+Multiple sources of systematic uncertainty may affect
+the predicted event yields, the distributions in the output of the BDT classifiers, or both.
+These uncertainties are either of theoretical origin, affecting the predicted cross
+section or decay kinematics of the collision process, or of experimental nature,
 accounting for possible mis-modeling of reconstructed objects.
-Systematic uncertainties may either be treated as correlated or
+The systematic uncertainties may further either be correlated or
 uncorrelated across the three years of data taking, and among the
-different signal and background processes.
+various signal and background processes considered in the analysis.
 
-The SM prediction for the inclusive $\ggHH$ production cross
+The SM prediction for the $\ggHH$ production cross
 section at $13\TeV$ center-of-mass collision energy is
 $31.05^{+1.14}_{-1.196}\fb$ at NNLO accuracy, with missing higher
-orders and undertainties in the proton parton density function (PDF)
+orders and uncertainties in the proton parton density function (PDF)
 and strong coupling $\alpha_{s}$ driving the uncertainty. %%~\cite{FIXME}
-The Vector $\qqHH$ process has a cross section of $1.276\pm0.027~\fb$,
+The $\qqHH$ process has a cross section of $1.276\pm0.027~\fb$,
 with PDF and $\alpha_{s}$ accounting for most of the uncertainty. %%~\cite{FIXME}
 The predicted Higgs boson decay branching fractions to $\PW\PW$,
 $\PGt\PGt$, and $\PZ\PZ$ have relative uncertainties of $1.54\%$,
 $1.65\%$, and $1.54\%$, respectively. %%~\cite{FIXME}
 %% https://github.com/HEP-KBFI/CombineHarvester/blob/master/ttH_htt/configs/list_syst_HH.py#L142-L161
 Alternate $\HH$ predictions are generated with the renormalization
-and factorization scales varied up and down by a factor of two, which
-constitute an uncertainty on the BDT output shape and event yields
-in each signal category, due to decay product acceptance in the detector.
-All theoretical uncertainties on signal $\HH$ production are correlated
+and factorization scales varied up and down by a factor of two.
+All theoretical uncertainties on the $\HH$ signal are correlated
 across all three years and among the selected event categories.
 Their primary impact is on the measurement of the $\HH$ production
 cross section as a ratio of the SM prediction.
 Only the acceptance uncertainty affects the $\HH$ inclusive cross
 section measurement, and none of these uncertainties impact the
-limits on resonant $\HH$ production or EFT scenarios.
+limits on resonant $\HH$ production or on EFT scenarios.
 %% NOTES: Branching uncertainties in AN definitely incorrect, need to
 %%        confirm correlation scheme, not clear if norm/fact is a "shape-only"
 %%        uncertainty given that it is included in inclusive xsec uncertainty.
 %%        Double-check SM mu vs. SM xsec vs. BSM usage of uncertainties.
 
-Background processes which produce enough ``prompt'' electrons, muons,
-and $\PGt$ leptons to match the selection criteria in one or more
-event categories have theoretial uncertainties associated with their
-production cross sections.
-The relative uncertainties in the dominant $\PW\PZ$ and $\PZ\PZ$ background
-cross sections are $2.1\%$ and $6.3\%$, respectively. %% ~\cite{FIXME}
-Sub-dominant single Higgs production cross section uncertainties range
-from $2$-$9\%$ for gluon fusion, VBF, and associated production with a
-$\PW$ or $\PZ$ boson. %% ~\cite{FIXME}
-Reducible backgrounds with one or two top quarks produced in association
-with a $\PW$, $\PZ$, or $\PH$ boson have cross section uncertainties that
-range from $8$ to $15\%$. %% ~\cite{FIXME}
-The normalization for extremely rare backgrounds not mentioned above
-(e.g.~triple boson or four top quark production) is given a $50\%$ uncertainty.
-Background events where at least one reconstructed lepton or $\tauh$
-originates from a photon conversion are assigned a $30\%$ yield uncertainty.
-Theoretical uncertainties affecting background cross sections are treated
+Uncertainties of theoretical origin also affect the contribution of irreducible background processes.
+The relative uncertainties in the cross sections of the dominant $\PW\PZ$ and $\PZ\PZ$ backgrounds
+amount to $2.1\%$ and $6.3\%$. %% ~\cite{FIXME}
+The uncertainties in the cross section for the sub-dominant single $\PHiggs$ boson backgrounds
+range from $2$-$9\%$ for gluon fusion, vector boson fusion, and for the associated production with a
+$\PW$ or $\PZ$ boson, respectively. %% ~\cite{FIXME}
+The cross sections for the production of $\PW$, $\PZ$, or $\PHiggs$ bosons with one or two top quarks
+are known with uncertainties ranging from $8$ to $15\%$. %% ~\cite{FIXME}
+The event yields of extremely rare backgrounds not mentioned above
+(e.g.~triple boson or four top quark production) are given an uncertainty of $50\%$.
+Background contributions arising from photon conversions
+are assigned a $30\%$ yield uncertainty.
+The theoretical uncertainties affecting background cross sections are treated
 as uncorrelated among different physics processes, but correlated across
 the different years and among all seven signal categories.
 %% NOTES: Confirm correlation scheme outlined above.  Are "photon conversion"
 %%        events all lumped together regardless of underlying physics process?
 
-The prediction for events with at least one selected non-prompt,``fake'',
-or charge mis-assigned lepton or $\tauh$ entering the signal region
-(described in Sec.~\ref{sec:backgroundEstimation} is assigned a $30\%$
-normalization uncertainty in most categories.
-Since the $\lllt$ and $\lttt$ categories use modified $\tauh$ selection criteria
-(Sec.~\ref{sec:eventReconstruction}), this uncertainty is raised to $50\%$.
+The rate of the fakes and flips backgrounds are assigned a $30\%$
+uncertainty in all search categories, except for the $\lllt$ and $\lttt$ categories.
+In the latter, the uncertainty on the fake background is increased to $50\%$,
+to account for the extra uncertainty arising from the modified $\tauh$ selection criteria that suppress the misidentification of electrons as $\tauh$.
 An additional uncertainty on the BDT output shape in each category is
-evaluated for events with a non-prompt or ``fake'' lepton or $\tauh$
+evaluated for events with a non-prompt or misidentified lepton or $\tauh$
 by means of a ``closure test'' in MC simulation.
 Events passing all signal selection criteria are compared to those
 with at least one lepton or $\tauh$ failing the ``tight'' identification,
-scaled according to the ``fakeable-to-tight'' method described in
-Sec.~\ref{sec:backgroundEstimation}.
+scaled according to the FF method described in
+Section~\ref{sec:backgroundEstimation}.
 The ratio of these two shapes is fit with a linear function, which
-is convoluted with the non-prompt and ``fake'' background prediction
+is convoluted with the fake background prediction
 from the data to serve as an uncertainty on the BDT output shape
 for these events in the signal region.
-The systematic uncertainties associated with the non-prompt and ``fake''
-lepton prediction are treated as uncorrelated amongst the different
-years, while the uncertainty on charge mis-assignment probability
-is correlated.
+The systematic uncertainties associated with the fake
+background prediction and on the uncertainty associated with the electron charge misidentification rate are treated as uncorrelated amongst the different
+years.
 %% NOTES: Are non-prompt yields correlated at all between categories?
 %%        State level of closure in fake/flip yields and shape from MC closure, control regions?
 
-Uncertainties in the modeling of the trigger and object reconstruction
-affect all signal and background processes estimated using MC simulation.
+Uncertainties in the modeling of the trigger and object reconstruction efficiency
+affect all signal and background processes that are estimated using MC simulation.
 Trigger efficiencies for events with at least two leptons are compared between
 data and MC simulation in multi-lepton control regions enriched in the $\ttbar$,
 $\PW\PZ$, and $\PZ\PZ$ background processes, as a function of lepton flavor,
@@ -96,38 +85,37 @@ $\llss$ and $\lltt$ categories, and a $1\%$ normalization uncertainty
 correlated among the $\lllnot$, $\lllt$, and $\llll$ categories.
 For the $\noltttt$ and $\lttt$ categories, the data-to-simulation agreement in
 trigger efficiency is computed using an independent set of events in data,
-and parameterized as a function of the $\tauh$ $\pt$, $\eta$, $\phi$, and
-reconstructed decay mode. %%~\cite{FIXME}
+and parametrized as a function of the $\pt$, $\eta$, and
+reconstructed decay mode of the $\tauh$ and, in the $\lttt$ category, of the $\pt$ and $\eta$ of the lepton. %%~\cite{FIXME}
 The trigger uncertainties for these two categories are treated as uncorrelated.
 All systematic uncertainties related to trigger modeling are correlated
 across different physics processes, but uncorrelated amongst the three years.
 %% NOTES: Check which control regions are used for leptons, and pt/eta/other dependence.
 %%        Verify that trigger efficiency scale factors are not applied to non-prompt.
 
-The uncertainties in reconstruction and identification efficiency for electrons,
+The uncertainties in the ``offline'' reconstruction and identification efficiency for electrons,
 muons, and $\tauh$ have been measured in $\PZ$ boson enriched regions in data
 for each level of identification criteria (``loose'', ``fakeable'', and ``tight''),
 and are applied to each event as a function of the lepton $\pt$ and $\eta$, or of
 the $\tauh$ $\pt$ and reconstructed decay mode.
 The reconstructed $\tauh$ energy has an uncertainty of around $1\%$, depending on
-the year and reconstructed $\tau$ decay mode.
+the year and reconstructed $\tauh$ decay mode.
 These uncertainties affect the predicted rate and BDT output shape for signal
 and background, and are correlated among the different physics processes, but
 uncorrelated across different years.
 
-The jet energy scale and resolution have uncertainties computed in common for
-all CMS analyses, using di-jet control regions. %%~cite{FIXME}
-The jet energy scale is evaluated using 11 separate components, some of which
+The jet energy scale and resolution are determined using di-jet control regions. %%~cite{FIXME}
+The jet energy scale is evaluated using $11$ separate components, some of which
 are correlated across different years, and some uncorrelated.
 The jet energy resolution uncertainty is uncorrelated among the three years.
-Jet energy uncertainties are also propagated to the \metET calculation.
-An additional uncertainty on the \metET vector comes from uncertainty in
+Jet energy uncertainties are also propagated to the $\ptmiss$ calculation.
+An additional uncertainty on the $\ptvecmiss$ comes from uncertainty in
 the energy of unclustered PF hadrons, which is uncorrelated across different years.
 The probability for true b jets to fail the multivariate b tagging
 criteria, or for jets from gluons or light flavored hadrons to be mis-tagged
 as b jets, is compared in data and MC simulation in event regions which
 are enriched in light or heavy flavor jets. %%~cite{FIXME}
-The resulting uncertainty in data-to-simulation agreement affects the yields
+The resulting uncertainty in the data-to-simulation agreement affects the yields
 and BDT output shapes of multiple physics processes.
 The statistical component of this uncertainty is treated as uncorrelated across
 different years, while other experimental sources are considered correlated.
@@ -135,19 +123,19 @@ different years, while other experimental sources are considered correlated.
 The total integrated luminosity for data collected in 2016, 2017, and 2018
 have uncertainties of $2.2\%$, $2.0\%$, and $1.5\%$, respectively. %%~\cite{FIXME}
 The measured cross section for inelastic $\Pp\Pp$ collisions is varied by
-$5\%$, which affects the number of pileup vertices, and thus impacts the
+$5\%$, which affects the number of pileup interactions, and thus impacts the
 jet reconstruction and lepton isolation. %%~\cite{FIXME}
 Finally, a very small fraction of data in 2016 and 2017 was lost due to
 trigger ``pre-firing'' induced by timing shifts in the ECAL detector.
 The uncertainty in this fraction affects predicted event yields from
-all signal and background processes, and is uncorrelated between 2016
+all signal and background processes that are modelled using the MC simulation, and is uncorrelated between 2016
 and 2017 data. %%~cite{FIXME}
 
 Of the systematic uncertainties listed above, those which have the largest
-correlations to the final measured $\HH$ signal strength (for SM production)
+impact on the final measured $\HH$ signal strength (for SM production)
 include the $\tauh$ identification efficiency ($8.4\%$), background rates
-from MC simulation ($8.0\%$), background rates from mis-identified leptons
-or $\tauh$ ($8.0\%$), and the theoretical uncertainty on $\HH$ production
+from MC simulation ($8.0\%$), background rates from misidentified leptons
+or $\tauh$ ($8.0\%$), and the theoretical uncertainty on the $\HH$ production
 cross section and decay branching fractions ($6.2\%$).
-All other sources of uncertainty have correlations of $3\%$ or less with
-the SM $\HH$ signal strength.
+All other sources of uncertainty have an impact of $3\%$ or less on
+the measured SM $\HH$ signal strength.
