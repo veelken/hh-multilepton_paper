@@ -9,17 +9,16 @@ These uncertainties are either theoretical, affecting the predicted cross
 section or decay kinematics of the collision process, or experimental,
 accounting for possible mis-modeling of reconstructed objects.
 Systematic uncertainties may either be treated as correlated or
-uncorrelated among the three years of data taking, and among the
+uncorrelated across the three years of data taking, and among the
 different signal and background processes.
 
-The SM prediction for the inclusive $\HH$ production cross section
-via gluon fusion at $13\TeV$ center-of-mass collision energy is
+The SM prediction for the inclusive $\ggHH$ production cross
+section at $13\TeV$ center-of-mass collision energy is
 $31.05^{+1.14}_{-1.196}\fb$ at NNLO accuracy, with missing higher
 orders and undertainties in the proton parton density function (PDF)
 and strong coupling $\alpha_{s}$ driving the uncertainty. %%~\cite{FIXME}
-The Vector Boson Fusion $\HH$ process has a cross section of
-$1.276\pm0.027\fb$, with PDF and $\alpha_{s}$ accounting for most of
-the uncertainty. %%~\cite{FIXME}
+The Vector $\qqHH$ process has a cross section of $1.276\pm0.027~\fb$,
+with PDF and $\alpha_{s}$ accounting for most of the uncertainty. %%~\cite{FIXME}
 The predicted Higgs boson decay branching fractions to $\PW\PW$,
 $\PGt\PGt$, and $\PZ\PZ$ have relative uncertainties of $1.54\%$,
 $1.65\%$, and $1.54\%$, respectively. %%~\cite{FIXME}
@@ -34,7 +33,7 @@ Their primary impact is on the measurement of the $\HH$ production
 cross section as a ratio of the SM prediction.
 Only the acceptance uncertainty affects the $\HH$ inclusive cross
 section measurement, and none of these uncertainties impact the
-limits on resonant $\HH$ production or $\HH$ production in EFT scenarios.
+limits on resonant $\HH$ production or EFT scenarios.
 %% NOTES: Branching uncertainties in AN definitely incorrect, need to
 %%        confirm correlation scheme, not clear if norm/fact is a "shape-only"
 %%        uncertainty given that it is included in inclusive xsec uncertainty.
@@ -88,14 +87,14 @@ is correlated.
 
 Uncertainties in the modeling of the trigger and object reconstruction
 affect all signal and background processes estimated using MC simulation.
-Trigger efficiencies are for events with at least two leptons are compared
-between data and MC in multi-lepton control regions enriched in the $\ttbar$,
+Trigger efficiencies for events with at least two leptons are compared between
+data and MC simulation in multi-lepton control regions enriched in the $\ttbar$,
 $\PW\PZ$, and $\PZ\PZ$ background processes, as a function of lepton flavor,
 $\pt$, and $\eta$.
 This results in a small $\pt$ dependent uncertainty correlated between the
 $\llss$ and $\lltt$ categories, and a $1\%$ normalization uncertainty
 correlated among the $\lllnot$, $\lllt$, and $\llll$ categories.
-For the $\tttt$ and $\lttt$ categories, the data-to-simulation agreement in
+For the $\noltttt$ and $\lttt$ categories, the data-to-simulation agreement in
 trigger efficiency is computed using an independent set of events in data,
 and parameterized as a function of the $\tauh$ $\pt$, $\eta$, $\phi$, and
 reconstructed decay mode. %%~\cite{FIXME}
@@ -108,6 +107,47 @@ across different physics processes, but uncorrelated amongst the three years.
 The uncertainties in reconstruction and identification efficiency for electrons,
 muons, and $\tauh$ have been measured in $\PZ$ boson enriched regions in data
 for each level of identification criteria (``loose'', ``fakeable'', and ``tight''),
-and are applied to each event as a function of lepton $\pt$ and $\eta$, or
-$\tauh$ $\pt$ and reconstructed decay mode.
-The reconstructed $\tauh$ energy 
+and are applied to each event as a function of the lepton $\pt$ and $\eta$, or of
+the $\tauh$ $\pt$ and reconstructed decay mode.
+The reconstructed $\tauh$ energy has an uncertainty of around $1\%$, depending on
+the year and reconstructed $\tau$ decay mode.
+These uncertainties affect the predicted rate and BDT output shape for signal
+and background, and are correlated among the different physics processes, but
+uncorrelated across different years.
+
+The jet energy scale and resolution have uncertainties computed in common for
+all CMS analyses, using di-jet control regions. %%~cite{FIXME}
+The jet energy scale is evaluated using 11 separate components, some of which
+are correlated across different years, and some uncorrelated.
+The jet energy resolution uncertainty is uncorrelated among the three years.
+Jet energy uncertainties are also propagated to the \metET calculation.
+An additional uncertainty on the \metET vector comes from uncertainty in
+the energy of unclustered PF hadrons, which is uncorrelated across different years.
+The probability for true b jets to fail the multivariate b tagging
+criteria, or for jets from gluons or light flavored hadrons to be mis-tagged
+as b jets, is compared in data and MC simulation in event regions which
+are enriched in light or heavy flavor jets. %%~cite{FIXME}
+The resulting uncertainty in data-to-simulation agreement affects the yields
+and BDT output shapes of multiple physics processes.
+The statistical component of this uncertainty is treated as uncorrelated across
+different years, while other experimental sources are considered correlated.
+
+The total integrated luminosity for data collected in 2016, 2017, and 2018
+have uncertainties of $2.2\%$, $2.0\%$, and $1.5\%$, respectively. %%~\cite{FIXME}
+The measured cross section for inelastic $\Pp\Pp$ collisions is varied by
+$5\%$, which affects the number of pileup vertices, and thus impacts the
+jet reconstruction and lepton isolation. %%~\cite{FIXME}
+Finally, a very small fraction of data in 2016 and 2017 was lost due to
+trigger ``pre-firing'' induced by timing shifts in the ECAL detector.
+The uncertainty in this fraction affects predicted event yields from
+all signal and background processes, and is uncorrelated between 2016
+and 2017 data. %%~cite{FIXME}
+
+Of the systematic uncertainties listed above, those which have the largest
+correlations to the final measured $\HH$ signal strength (for SM production)
+include the $\tauh$ identification efficiency ($8.4\%$), background rates
+from MC simulation ($8.0\%$), background rates from mis-identified leptons
+or $\tauh$ ($8.0\%$), and the theoretical uncertainty on $\HH$ production
+cross section and decay branching fractions ($6.2\%$).
+All other sources of uncertainty have correlations of $3\%$ or less with
+the SM $\HH$ signal strength.
