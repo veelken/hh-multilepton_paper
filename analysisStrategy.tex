@@ -22,7 +22,7 @@ the missing transverse momentum, quantified by the discriminant $\metLD$ describ
 the scalar sum in $\pt$ of reconstructed $\Pe$, $\PGm$, $\tauh$, and jets;
 the ``visible'' mass of the $\PHiggs$ boson pair, given by the mass of the system of reconstructed $\Pe$, $\PGm$, and $\tauh$,
 and the ``full'' mass of the $\HH$ system, including neutrinos, reconstructed the algorithm described in Ref.~\cite{Ehataht:2018nql}.
-The latter algorithm targets $\HH$ signal events decaying to \tttt and thus works best in the search categories \zeroLeptonFourTau, \oneLeptonThreeTau, and \twoLeptonTwoTau,
+The latter algorithm targets $\HH$ signal events decaying to \tttt and thus works best in the search categories \zeroLeptonFourTau and \oneLeptonThreeTau,
 where the signal contribution from the decay modes \WWWW and \WWtt is small compared to the contribution from the \tttt decay mode.
 
 These observables are complemented by further inputs, which allow the BDT to learn that the distributions in these observables for $\HH$ signal events
@@ -39,15 +39,9 @@ The BDT classifiers used for the analysis of resonant $\HH$ production are train
 and the mass $m_{\X}$ of the resonance is used as a real-valued input to the BDT.
 
 The training is performed using the $\textsc{XGBoost}$ algorithm~\cite{Chen:2016btl},
-which is interfaced to the $\textsc{Scikit-learn}$ machine learning library~\cite{scikit-learn}.
+interfaced to the $\textsc{Scikit-learn}$ machine learning library~\cite{scikit-learn}.
 The parameters of the BDT training (so-called ``hyperparameters'') are optimized using the procedure described in Ref.~\cite{Tani:2020dyi}.
 
-Various imprecisely known or measured effects affect the event yields of the $\HH$ signal and of the background processes that are modeled using the MC simulation,
-as well as the shape of the distribution in the discriminating observable.
-These effects are collectively referred to as systematic uncertainties and are included as nuisance parameters $\theta$ into the ML fit.
-
-Statistical uncertainties on the distributions in the discriminating observable for the $\HH$ signal and for background processes
-are accounted for in the ML fit by the approach detailed in Ref.~\cite{Barlow:1993dm}.
 
 
 

@@ -16,21 +16,21 @@ the bremsstrahlung emitted along the electron trajectory;
 and the isolation of the electron with respect to other particles.
 Details of the algorithm are given in Ref.~\cite{Sirunyan:2020icl}.
 Electrons passing a loose (tight) selection on the output of the MVA algorithm are referred to as ``fakeable'' (``tight'') electrons.
-The selection thresholds have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to achieve a higher electron identification efficiency.
+The selection thresholds applied in this analysis have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to achieve a higher electron identification efficiency.
 Electron candidates resulting from photon conversions are removed by requiring 
 that the track features no missing hits in the innermost layers of the silicon tracker and by vetoing candidates that are matched to a reconstructed conversion vertex.
 In the \twoLeptonssZeroTau channel, further electron selection criteria are applied,
 which demand the consistency among three independent measurements of the electron charge~\cite{Khachatryan:2015hwa}.
 
-The reconstruction of muons is based on linking track segments reconstructed in the silicon tracker 
+The reconstruction of muons is based on linking track segments detected in the silicon tracker 
 to hits in the gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid~\cite{Sirunyan:2018}.
-They are identified using an MVA algorithm~\cite{Sirunyan:2020icl}, which combines observables sensitive 
+Muons are identified by an MVA algorithm~\cite{Sirunyan:2020icl}, based on observables sensitive 
 to: the energy deposits associated to the muon in the ECAL and HCAL;
 the hits and track segments reconstructed in the gas-ionization detectors located outside the solenoid,
 the quality of the spatial matching between the track segments reconstructed in the silicon tracker and in the gas-ionization detectors;
 and the isolation of the muon with respect to other particles.
 Muons passing a loose (tight) selection on the MVA discriminant are referred to as ``fakeable'' (``tight'') muons.
-The selection thresholds have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to increase the muon identification efficiency.
+The selection thresholds have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to achieve a higher efficiency.
 In the \twoLeptonssZeroTau channel, the uncertainty in the curvature of the muon track is demanded to be less than $20\%$
 to ensure a high-quality charge measurement.
 
@@ -41,8 +41,8 @@ The latter are reconstructed by clustering the electrons and photons reconstruct
 which are narrow in $\eta$ but wide in $\phi$ direction.
 The strips account for the sizable probability for photons originating from neutral pion decays
 to convert into an electron-positron pair when traversing the silicon tracker.
-The conversions have the effect of broadening the energy deposits associated to these photons in the ECAL,
-as the electrons and positrons produced in these conversions are bent in opposite azimuthal directions by the magnetic field
+Conversions have the effect of broadening the energy deposits associated to these photons in the ECAL,
+as the electrons and positrons produced in the conversions are bent in opposite azimuthal directions by the magnetic field
 and may further emit bremsstrahlung photons while traversing the tracker.
 The decay modes considered in this analysis are:
 $\PGt^{-} \to \Ph^{-}\Pnut$, $\PGt^{-} \to \Ph^{-}\Ppizero\Pnut$, $\PGt^{-} \to \Ph^{-}\Ppizero\Ppizero\Pnut$, 
@@ -50,7 +50,7 @@ $\PGt^{-} \to \Ph^{-}\Ph^{+}\Ph^{-}\Pnut$, and $\PGt^{-} \to \Ph^{-}\Ph^{+}\Ph^{
 (and analogous for the charge-conjugate decays),
 where the symbols $\Ph^{-}$ and $\Ph^{+}$ denotes either a charged pion or a charged kaon.
 The identification of $\tauh$ is performed by the ``DeepTau'' algorithm~\cite{CMS-DP-2019-033}.
-The algorithm is based on a convolutional ANN~\cite{lecun1989},
+The algorithm is based on a convolutional artificial neural network (ANN)~\cite{lecun1989},
 which uses as input a set of $42$ high-level observables in combination with low-level information obtained from the silicon tracker, the electromagnetic and hadronic calorimeters, and the muon detectors.
 The former comprise the $\pt$, $\eta$, $\phi$, and mass of the $\tauh$ candidate; the reconstructed $\tauh$ decay mode;
 observables that quantify the isolation of the $\tauh$ with respect to charged and neutral particles;
@@ -64,11 +64,11 @@ Two different selections on the output are used in the analysis.
 The $\tauh$ passing the loose (tight) selection are referred to as the ``fakeable'' (``tight'') $\tauh$.
 Additional discriminants are available to separate $\tauh$ from electrons and muons.
 
-Jets are reconstructed using the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma},
+Jets are reconstructed with the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma},
 using the particles reconstructed by the PF algorithm as input,
-and are used to reconstruct the jets produced in $\PHiggs \to \PW\PW \to \jet\jet\Plepton\Pnu$ decays.
+and are utilized to reconstruct the jets produced in $\PHiggs \to \PW\PW \to \jet\jet\Plepton\Pnu$ decays.
 Two different types of jets, reconstructed with distance parameters of $0.4$ and $0.8$ and referred to as AK4 and AK8 jets are used in this analysis.
-They are used for the purpose of reconstructing hadronic decays of $\PW$ bosons of low $\pt$ and high $\pt$, respectively,
+They are employed for the purpose of reconstructing hadronic decays of $\PW$ bosons of low $\pt$ and high $\pt$, respectively,
 accounting for the fact that the quarks produced in hadronic decays of high-$\pt$ (``boosted'') $\PW$ bosons are typically collimated,
 due to the Lorentz boost in direction of the $\PW$ boson and thus cannot be resolved as two separate AK4 jets.
 As the leptons produced in $\PHiggs \to \PW\PW \to \jet\jet\Plepton\Pnu$ decays with boosted $\PW$ bosons tend to be close to the jets,

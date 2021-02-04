@@ -1,25 +1,26 @@
 \section{Data samples and Monte Carlo simulation}
 \label{sec:datasets}
 
-The data analyzed represent a total of $137.2$~\fbinv of proton-proton collisions
-collected by the CMS detector in Run~2, which were certified to have all detector components
-working properly: $35.9$~\fbinv in 2016, $41.5$~\fbinv in 2017, and $59.7$~\fbinv in 2018.
+The analyzed $\Pp\Pp$ collision data corresponds to an integrated luminosity of $137.2$~\fbinv,
+collected by the CMS detector in LHC Run~2:
+$35.9$~\fbinv in 2016, $41.5$~\fbinv in 2017, and $59.7$~\fbinv in 2018.
+Only data-taking periods during which all detector components were fully operational are included in the analysis.
 The two-tier CMS ``trigger'' system selects one event of interest out of every thirty
 thousand collision events to save for closer examination, based on the presence of
 specific combinations of reconstructed objects~\cite{Khachatryan:2016bia,Sirunyan:2020zal}.  This analysis
-uses triggers requiring one or more electrons, muons, or $\tauh$
-leptons to be associated with the primary collision vertex. The exact triggers and their
-thresholds varied slightly from year to year, due to changing luminosity and detector
+uses triggers requiring one or more $\Pe$, $\PGm$, or $\tauh$
+to be associated with the primary collision vertex. The exact triggers and their
+thresholds varied slightly from year to year, due to changes in luminosity and detector
 conditions, as well as improvements to the trigger algorithms.  The trigger $\pt$ and
 $\eta$ requirements for each year are shown in Table~\ref{tab:triggers}.  All
-triggers included identification and isolation requirements on the leptons and $\tauh$ as well.
+triggers include identification and isolation requirements on the leptons and $\tauh$.
 
 \begin{table}[!h]
 \begin{center}
 \begin{tabular}{|l|l|}
 
 \hline
-Trigger            & Object selection (electron $\Pe$, muon $\Pgm$, and hadronic tau $\tauh$) \\
+Trigger            & Selection requirements for electrons ($\Pe$), muons ($\PGm$), and hadronic taus ($\tauh$) \\
 \hline
 Single $\Pe$       & $\pt(\Pe) > 27 / 32 - 35 / 32\GeV$ (2016/17/18) \\
 Single $\Pgm$      & $\pt(\Pgm) > 22 - 24 / 24 - 27 / 24\GeV$ (2016/17/18) \\ 
@@ -41,8 +42,9 @@ Triple $\Pgm$      & $\pt(\Pgm) > 12, 10, 5\GeV$ \\
 \end{tabular}
 \end{center}
 \caption{
-  Selection requirements on \pt and $\eta$ for lepton-triggered events used in this analysis.  All
-  leptons were additionally required to pass identification, isolation, and vertexing requirements.
+  Selection requirements on \pt and $\eta$ of electrons ($\Pe$), muons ($\PGm$), and hadronic taus ($\tauh$)
+  applied by the triggers used in this analysis.  All
+  $\Pe$, $\PGm$, and $\tauh$ were additionally required to pass identification, isolation, and vertexing requirements.
 }
 \label{tab:triggers}
 \end{table}
@@ -50,9 +52,9 @@ Triple $\Pgm$      & $\pt(\Pgm) > 12, 10, 5\GeV$ \\
 %% TODO: how were events "cross-cleaned" between datasets? (AWB 11.01.21)
 
 Monte Carlo (MC) simulated samples were used to model $\HH$ signal events, and a wide range
-of SM background processes which decay to leptons or $\tauh$.  Background MC samples
+of SM background processes which produce $\Pe$, $\PGm$, or $\tauh$.  Background MC samples
 include those producing a single $\PW$ or $\PZ$ boson, two bosons ($\PW\PW$, $\PW\PZ$, $\PZ\PZ$, $\PW\Pgg$, and $\PZ\Pgg$),
-three bosons ($\PW\PW\PW$, $\PW\PW\PZ$, $\PW\PZ\PZ$, $\PZ\PZ\PZ$, and $\PW\PZ\Pgg$), a single Higgs boson (via gluon fusion,
+three bosons ($\PW\PW\PW$, $\PW\PW\PZ$, $\PW\PZ\PZ$, $\PZ\PZ\PZ$, and $\PW\PZ\Pgg$), a single $\PHiggs$ boson (via gluon fusion,
 vector boson fusion, or associated production with a $\PW$ or $\PZ$ boson), a single top quark,
 a top anti-top quark pair ($\ttbar$), and top quarks associated with one or more bosons ($\ttW$,
 $\ttZ$, $\ttH$, $\tHq$, and $\tHW$).  Most samples, including the dominant irreducible $\PW\PZ$ and $\PZ\PZ$
@@ -65,7 +67,7 @@ Non-resonant $\HH$ MC samples include SM production, ``box-only'' $\HH$ events w
 the trilinear Higgs self-coupling ($\kappa_{\lambda}$) set to zero, and $12$ benchmark scenarios
 in the EFT approach.  These benchmarks represent different combinations of
 $\kappal$, $\kappat$, $\ctwo$, $\cg$, and $\cgg$ values which correspond
-to regions of similar LO kinematics, described in~\cite{Carvalho:2015ttv}.  The parameter
+to regions of similar LO kinematics; see Ref.~\cite{Carvalho:2015ttv} for details.  The parameter
 values are shown in Table~\ref{tab:HH_benchmarks}.  The EFT benchmark samples were
 generated at LO but are reweighted to NLO accuracy using the results of Ref.~\cite{Buchalla:2018yce}.
 
@@ -104,13 +106,13 @@ Box-only  & 0.0        & 1.0       & 0.0     & 0.0   & 0.0  \\
 \end{table}
 
 Resonant $\HH$ production was simulated at LO for both spin-0 (radion) and spin-2 (graviton)
-scenarios with masses of $250$, $260$, $270$, $280$, $300$, $320$, $350$, $400$, $450$, $500$, $550$, $600$,
+scenarios with masses $m_{\X}$ of $250$, $260$, $270$, $280$, $300$, $320$, $350$, $400$, $450$, $500$, $550$, $600$,
 $650$, $700$, $750$, $800$, $850$, $900$, and $1000\GeV$.
 
-All MC samples were generated using $\textsc{MadGraph5\_aMCatNLO}$~\cite{Alwall:2014hca} or
-$\textsc{POWHEG}$ $v2$~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2010xd}, with parton shower, hadronization
-processes, and $\PGt$ lepton decays modeled by
+All MC samples were generated using either $\textsc{MadGraph5\_aMCatNLO}$~\cite{Alwall:2014hca} or
+$\textsc{POWHEG}$ $v2$~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2010xd}.  Parton shower, hadronization
+processes, and $\PGt$ lepton decays are modeled by
 $\textsc{PYTHIA}$~\cite{PYTHIA_CUETP8M1tune_CMS,PYTHIA_CUETP8M2tune_CMS,Sirunyan:2019dfx,PYTHIA_MonashTune}.
-The CMS apparatus was modeled in detail using $\textsc{geant4}$~\cite{Agostinelli:2002hh}, and simulated events
+The CMS apparatus was modeled in detail using $\textsc{geant4}$~\cite{Agostinelli:2002hh}.  Simulated events
 were reconstructed using the same procedure as in data.  Additional collisions were generated with $\textsc{PYTHIA}$ and
 overlaid on all MC events, with weights used to match the collision multiplicity distribution in data.

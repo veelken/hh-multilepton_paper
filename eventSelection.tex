@@ -2,8 +2,8 @@
 \label{sec:eventSelection}
 
 Events are selected with the aim of maximizing the acceptance for $\HH$ decays to $\WWWW$, $\WWtt$, and
-$\tttt$, while simultaneously rejecting the overwhelming backgrounds, which arise from multijet, single $\PW$
-boson, $\PZ$ boson, and $\ttbar$ production.  To achieve this, we require multiple
+$\tttt$, while simultaneously rejecting the overwhelming backgrounds, which arise from multijet production, 
+the production of single $\PW$ and $\PZ$ bosons, $\PW$ and $\PZ$ boson pair production, and $\ttbar$ production.  To achieve this, we require multiple
 reconstructed leptons $\lep$ (electrons or muons) or hadronically decaying taus
 \tauh to be associated with the collision vertex in each event.  The leptons and $\tauh$ may originate
 from the decay of a $\PW$ boson or from a $\Pgt$ decay.  Signal candidate events
@@ -22,14 +22,14 @@ jets passing the ``loose'' b-tag criteria, are discarded.
 Leptons originating from low-mass Drell-Yan production, from decays of $\PJpsi$ and $\PUpsilon$ meson,
 from cascade decays of bottom quarks, and from photon conversions
 are removed by vetoing events containing a pair of ``loose'' leptons of mass $m(\leplep) < 12\GeV$.
-To eliminate overlap with events selected in the search for $\HH \to \Pbottom\APbottom\PZ\PZ$ decay~\cite{HIG-20-004}, no event in the
+To eliminate overlap with events selected in the search for $\HH$ production in the $\Pbottom\APbottom\PZ\PZ$, $\PZ\PZ \to 4\Plepton$ decay mode~\cite{HIG-20-004}, no event in the
 non-\tauh categories (\llss, \lllnot, and \llll) may contain two same-flavor,
 opposite-charge ``loose'' lepton pairs with a combined mass less than $140\GeV$.
 In addition, to reduce the \Zll background, these categories along with
 \lltt exclude events where any same-flavor opposite-charge pair of ``loose''
 leptons has a mass between $81$ and $101\GeV$.
 
-The leptons and \tauh selected in any of the seven event categories must pass the ``tight'' selection 
+The leptons and \tauh selected in any of the signal regions of the seven event categories must pass the ``tight'' selection 
 described in Section~\ref{sec:eventReconstruction}.
 In addition, they are required to pass category-specific $\pt$ thresholds.
 The latter are motivated by the trigger selection.
@@ -39,14 +39,14 @@ and the multiplicity of AK4 or AK8 jets (targeting hadronic $\PW$ decays).
 
 The leading and subleading lepton in the \llss category must pass $\pt$ cuts of $25$ and $15\GeV$, respectively,
 and have the same charge.
-The events selected in this category are furthermore required to contain at least three AK4 jets or one AK8 jet. %% (TODO - check!)
-Events in with both leptons are electrons must have $\metLD > 30\GeV$ to suppress
+The events selected in this category are furthermore required to contain either at least three AK4 jets or one AK8 jet and at least one AK4 jet. %% (TODO - check!)
+Events in with both leptons are electrons must have $\metLD > 30\GeV$, in order to suppress
 charge mis-identified $\Zee$ background.
 After this selection, the main backgrounds in the \llss category are due to $\PW\PZ$ production
 and to events in which one or both reconstructed leptons arise from the misidentification of a non-prompt lepton or hadron,
 as shown in Table~\ref{tab:event_yields}.
 The \WWWW decay mode accounts for roughly $80\%$ of
-selected SM di-Higgs signal events, with \WWtt events accounting for the other $20\%$.
+SM $\HH$ signal events selected in the \llss category, with \WWtt events accounting for the other $20\%$.
 
 In the \lllnot category, 
 the leading, subleading, and third lepton are required to
@@ -54,41 +54,43 @@ have $\pt$ values greater than $25$, $15$, and $10\GeV$, respectively, and the s
 At least one AK4 or AK8 jet must be present, and the $\metLD$ quantity must be greater than $30\GeV$,
 or $45\GeV$ if there is a least one pair of same-flavor, opposite-charge ``fakeable''
 leptons in the event.  Again backgrounds are dominated by $\PW\PZ$ production and events with misidentified
-leptons, and the signal composition is similar to \llss.
+leptons, and the signal composition is similar to the \llss category.
 
 The \llll category has identical lepton criteria, except that the third lepton
 must have $\pt > 15\GeV$, and a fourth lepton with $\pt > 10\GeV$ is required, with
-the total charge summing to zero.  Two thirds of signal events come from the \WWWW final
-state, and one third from \WWtt, with $\PZ\PZ$ accounting for $85\%$ of the background.
+the total charge summing to zero.  Two thirds of signal events come from the \WWWW decay mode, 
+and one third from \WWtt, while $\PZ\PZ$ production accounts for $85\%$ of the background.
 
 The \lllt category matches the \lllnot requirements on the leptons, 
-but in addition the presence of a $\tauh$ of charge opposite to the sum of the lepton charges is required.  
-Almost $70\%$ of signal events come from $\HH \to \WWtt$,
-and $\PZ\PZ$ production dominates the background.  
+but in addition the presence of a $\tauh$ of charge opposite to the sum of the lepton charges is required.  [ CV: ADD DESCRIPTION OF E->TAU VETO HERE ]
+Almost $70\%$ of signal events come from the $\WWtt$ decay mode,
+while $\PZ\PZ$ production dominates the background.  
 
-The \lltt categoriy requires
-the leading and subleading lepton to pass $\pt$ thresholds $25$ and $15\GeV$, 
-and the two $\tauh$ candidates with highest $\pt$ must bring the total lepton+$\tauh$ charge sum to zero.
-Signal events are split $60$/$40\%$ between the \WWtt and \tttt final
-states, and backgrounds come mostly from $\PZ\PZ$ production and from events with a misidentified lepton or $\tauh$.
+The \lltt category requires
+the leading and subleading lepton to pass $\pt$ thresholds of $25$ and $15\GeV$, 
+while the two $\tauh$ of highest $\pt$ must bring the total lepton+$\tauh$ charge sum to zero.
+Signal contributions are mostly due to the \WWtt ($60\%$) and \tttt ($40\%$) decay modes, 
+while background contributions mostly arise from $\PZ\PZ$ production and from events with a misidentified lepton or $\tauh$.
 
-To match trigger requirements, the leading lepton in \lttt events must have
-$\abs{\eta} < 2.1$, and $\pt > 20\GeV$ if it is an electron and $\pt > 15\GeV$ if it is a muon.
+In the \lttt category,
+the leading lepton is required to satisfy the conditions 
+$\abs{\eta} < 2.1$, and $\pt > 20\GeV$ if it is an electron and $\pt > 15\GeV$ if it is a muon,
+in order to pass the trigger.
 The leading, subleading, and third
-$\tauh$ must have $\pt > 40$, $30$, and $20\GeV$, respectively, and the sum of $\tauh$ and lepton charges must be zero.
-Background events containing a $\Zee$ decay where one electron is mis-identified
-as a $\tauh$ are vetoed by discarding events with an opposite-charge electron-$\tauh$
-pair with mass between $71$ and $101\GeV$, if the $\tauh$ either fails a loose cut on the discriminant that separates $\tauh$ from electrons
-or falls near the ECAL barrel-endcap ``crack'' in $1.46 < \abs{\eta} < 1.558$.  Around $80\%$ of selected signal events come
-from the \tttt final state, with $20\%$ from \WWtt events, and most
-background events coming from $\PZ\PZ$ production or containing a misidentified lepton or $\tauh$.
+$\tauh$ must have $\pt > 40$, $30$, and $20\GeV$, respectively, and the sum of $\tauh$ and lepton charges is required to be zero.
+Background events containing a $\Zee$ decay where one electron is misidentified
+as a $\tauh$ are vetoed by discarding events containing an electron-$\tauh$ pair of opposite charge
+and mass between $71$ and $101\GeV$, and in which the $\tauh$ either fails a loose cut on the discriminant that separates $\tauh$ from electrons
+or falls near the ECAL barrel-endcap ``crack'' in $1.46 < \abs{\eta} < 1.558$.  Around $80\%$ of $\HH$ signal events selected in the \lttt category
+come from the \tttt and $20\%$ from the \WWtt decay mode, while the majority of
+background events come from either $\PZ\PZ$ production or contain a misidentified lepton or $\tauh$.
 
 The \noltttt category has identical $\pt$ requirements on the leading three $\tauh$,
-with the fourth \tauh also required to have $\pt > 20\GeV$.  Due to the extremely
-low backgrounds, no charge sum criterion or $\Zee$ veto is applied.  Almost
-all signal events come from the \tttt final state, with two thirds of the
-background containing at least one fake $\tauh$, and the rest coming from $\PZ\PZ$ or single
-Higgs production.
+and the fourth \tauh is also required to have $\pt > 20\GeV$.  Due to the extremely
+low backgrounds in this category, no charge sum criterion or $\Zee$ veto is applied.  Almost
+all signal events come from the \tttt decay mode, while the background is dominated (at the level of $65\%$) by events 
+containing at least one fake $\tauh$, and the remaining background contributions arise from $\PZ\PZ$ and single
+$\PHiggs$ boson production.
 
 \begin{table}[!h]
 \begin{center}
@@ -101,7 +103,7 @@ TO & DO \\
 \end{tabular}
 \end{center}
 \caption{
-  Event yields.
+  Event yields. [ CV: MOVE EVENT YIELD TABLE TO RESULTS SECTION ]
 }
 \label{tab:event_yields}
 \end{table}
