@@ -1,18 +1,16 @@
 \section{Analysis strategy}
 \label{sec:analysisStrategy}
 
-The rate of the $\HH$ signal is extracted through a maximum-likelihood (ML) fit to distributions in discriminating observables.
-[ MOVE DESCRIPTION OF LIKELIHOOD FUNCTION FROM RESULTS SECTION TO HERE ? ]
-The binning is chosen such that the same amount of background is contained in each bin,
-with the number of bins determined by the condition that the statistical uncertainty in each bin does not exceed $XX\%$ relative to the background contribution expected in that bin.
-The seven search categories are fitted simultaneously with two control regions.
-The latter are enriched in the contributions of $\PW\PZ$ and $\PZ\PZ$ production, respectively,
-the two dominant irreducible backgrounds to the analysis.
-
-The discriminating observables are chosen to be the output of boosted decision tree (BDT) classifiers~\cite{Breiman:1984jka},
+The rate of the $\HH$ signal is extracted through a maximum-likelihood (ML) fit to
+the output of boosted decision tree (BDT) classifiers~\cite{Breiman:1984jka},
 which are trained to discriminate the $\HH$ signal from backgrounds.
 Three such classifiers are trained for each of the seven search categories,
-targeting non-resonant $\HH$ production and resonant $\HH$ production from the decay of heavy particles of spin $0$ and of spin $2$, respectively.
+targeting non-resonant $\HH$ production and resonant $\HH$ production from
+the decay of heavy particles of spin $0$ and of spin $2$, respectively.
+The binning for each BDT output distribution is chosen such that the same
+amount of background is contained in each bin, with the number of bins
+determined by the condition that the statistical uncertainty in each bin does
+not exceed $XX\%$ relative to the background contribution expected in that bin.
 
 The observables used as inputs to the BDT classifiers are:
 the $\pt$ and $\eta$ of reconstructed electrons, muons, and $\tauh$;
