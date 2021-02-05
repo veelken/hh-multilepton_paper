@@ -5,33 +5,44 @@ The CMS particle-flow (PF) algorithm~\cite{Sirunyan:2017ulk} reconstructs each i
 using an optimized combination of information from the various elements of the CMS detector.
 The particles are subsequently classified into five mutually exclusive categories: 
 electrons, muons, photons, and charged and neutral hadrons.
-These particles are then used to reconstruct hadronic $\PGt$ decays, jets, and the missing transverse momentum in the event.
+These particles are then combined to reconstruct hadronic $\PGt$ decays, jets, and the missing transverse momentum in the event.
 
-Electrons are reconstructed within the geometric acceptance of the tracking detectors, $\abs{\eta} < 2.5$,
-by combining the information from tracker and ECAL~\cite{Khachatryan:2015hwa}.
-Their identification is based on an MVA algorithm, which combines observables sensitive 
-to: the matching of measurements of the electron energy and direction obtained from the tracker and the calorimeter;
-the compactness of the electron cluster;
-the bremsstrahlung emitted along the electron trajectory;
+Electrons are reconstructed within the geometric acceptance of the tracking detectors ($\abs{\eta} < 2.5$)
+by combining information from the tracker and the ECAL~\cite{Khachatryan:2015hwa}.
+They are initially identified using an MVA which distinguishes real electrons from hadrons, %% ~\cite{TODO: CMS EGamma}
+along with loose requirements on track association with the collision vertex, and isolation from hadronic activity.
+Electrons passing this intial selection are referred to as ``loose''.
+In this analysis, events with leptons originating from hadron decay (``non-prompt''), or with
+hadrons mis-identified as electrons (``fake''), consititute the largest source of background.
+This motivates the use of an additional MVA, trained to select ``prompt'' electrons
+from $\PW$, $\PZ$, and $\PGt$ decay, and reject fake or non-prompt electrons.
+This MVA was previously used for measurements of $\ttH$ production in events with multiple leptons~\cite{Sirunyan:2020icl}.
+It combines observables comparing measurements of the electron energy and direction in the tracker and the ECAL,
+the compactness of the electron cluster, the bremsstrahlung emitted along the electron trajectory,
 and the isolation of the electron with respect to other particles.
-Details of the algorithm are given in Ref.~\cite{Sirunyan:2020icl}.
-Electrons passing a loose (tight) selection on the output of the MVA algorithm are referred to as ``fakeable'' (``tight'') electrons.
-The selection thresholds applied in this analysis have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to achieve a higher electron identification efficiency.
-Electron candidates resulting from photon conversions are removed by requiring 
-that the track features no missing hits in the innermost layers of the silicon tracker and by vetoing candidates that are matched to a reconstructed conversion vertex.
-In the \twoLeptonssZeroTau channel, further electron selection criteria are applied,
-which demand the consistency among three independent measurements of the electron charge~\cite{Khachatryan:2015hwa}.
+Electrons passing loose and tight thresholds of the MVA output are referred to as ``fakeable'' and ``tight'' electrons, respectively.
+Only ``tight'' electrons are used to reconstruct signal candidate events, while data events with ``fakeable'' electrons which fail
+the ``tight'' selection are used to estimate the contribution of fake and non-prompt electron backgrounds to the signal region.
+The MVA selection thresholds in this analysis are lower than those in Ref.~\cite{Sirunyan:2020icl}, in order to increase
+the efficiency for low-$\pt$ electrons which frequently appear in $\HH$ decays.
+Electrons from photon conversions are suppressed by requiring that the track is missing no hits
+in the innermost layers of the silicon tracker, and is not matched to a reconstructed conversion vertex.
+In the \twoLeptonssZeroTau category, further electron selection criteria are applied,
+requiring consistency among three independent measurements of the electron charge~\cite{Khachatryan:2015hwa}.
 
-The reconstruction of muons is based on linking track segments detected in the silicon tracker 
-to hits in the gas-ionization detectors embedded in the steel flux-return yoke outside the solenoid~\cite{Sirunyan:2018}.
-Muons are identified by an MVA algorithm~\cite{Sirunyan:2020icl}, based on observables sensitive 
-to: the energy deposits associated to the muon in the ECAL and HCAL;
+Muons are reconstructed by extrapolating tracks in the silicon tracker to hits in the gas-ionization
+detectors embedded in the steel flux-return yoke outside the solenoid~\cite{Sirunyan:2018}.
+To pass the initial ``loose'' identification requirement, muons must satisfy criteria related to
+isolation and track proximity to the primary vertex, as well as track quality observables and
+matching between the tracker and muon chambers. %% ~\cite{TODO: CMS Muon POG}
+Additional requirements on the prompt vs.\ non-prompt muon identification MVA from Ref.~\cite{Sirunyan:2020icl} allow
+us to select ``tight'' muons for signal candidate events, and ``fakeable'' muons for non-prompt background estimation.
+Inputs to this MVA include energy deposits close to the muon in the ECAL and HCAL,
 the hits and track segments reconstructed in the gas-ionization detectors located outside the solenoid,
-the quality of the spatial matching between the track segments reconstructed in the silicon tracker and in the gas-ionization detectors;
+the quality of the spatial matching between the track segments reconstructed in the silicon tracker and in the gas-ionization detectors,
 and the isolation of the muon with respect to other particles.
-Muons passing a loose (tight) selection on the MVA discriminant are referred to as ``fakeable'' (``tight'') muons.
-The selection thresholds have been optimized with respect to Ref.~\cite{Sirunyan:2020icl} in order to achieve a higher efficiency.
-In the \twoLeptonssZeroTau channel, the uncertainty in the curvature of the muon track is demanded to be less than $20\%$
+Again, lower MVA selection thresholds compared to Ref.~\cite{Sirunyan:2020icl} bring higher efficiency for the $\HH$ signal.
+In the \twoLeptonssZeroTau channel, the uncertainty in the curvature of the muon track is required to be less than $20\%$
 to ensure a high-quality charge measurement.
 
 Hadronic decays of $\PGt$ leptons are identified by the ``hadrons-plus-strips'' (HPS) algorithm~\cite{Sirunyan:2018pgf}.
