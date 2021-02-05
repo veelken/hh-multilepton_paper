@@ -33,6 +33,23 @@ They are based on the signal regions (SR) of the \threeLeptonZeroTau and \fourLe
 the sole modification being that the $\PZ$-veto is inverted.
 The \threeLeptonCR and \fourLeptonCR are included in the ML fit that is used to extract the $\PHiggs\PHiggs$ signal,
 thereby providing in-situ constraints on the $\PW\PZ$ and $\PZ\PZ$ backgrounds.
+Distributions in kinematic observables in the \threeLeptonCR and \fourLeptonCR are shown in Fig.~\ref{fig:postfitPlotsCR}.
+The transverse mass, 
+$\mT = \sqrt{2 \pt^{\Plepton} \ptmiss \left( 1 - \cos\Delta\phi \right)}$,
+in the \threeLeptonCR is computed using the lepton that is not identified as originating from the $\PZ$-boson decay.
+The symbol $\Delta\phi$ refers to the angle in the transverse plane between the momentum of this lepton and the $\ptvecmiss$ vector.
+The observable $m_{4\Plepton}$ refers to the mass of the $4$-lepton system in the \fourLeptonCR.
+
+\begin{figure}
+  \centering\includegraphics[width=\cmsFigWidth]{plots/postFitPlots/WZ.pdf}
+  \centering\includegraphics[width=\cmsFigWidth]{plots/postFitPlots/ZZ.pdf}
+  \caption{
+    Distribution in the observable $\mT$ in the \threeLeptonCR (left) and in the observable $m_{4\Plepton}$ in the \fourLeptonCR (right).
+    The distributions expected for the $\PW\PZ$ and $\PZ\PZ$ as well as for other background processes
+    are shown for the values of nuisance parameters obtained from the ML fit described in Section~\ref{sec:results}.
+  }
+  \label{fig:postfitPlotsCR}
+\end{figure}
 
 Overlap between irreducible and reducible backgrounds and between the different types of reducible backgrounds,
 which would cause the double-counting of background contributions,
