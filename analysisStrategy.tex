@@ -4,44 +4,40 @@
 The rate of the $\HH$ signal is extracted through a maximum-likelihood (ML) fit to
 the output of boosted decision tree (BDT) classifiers~\cite{Breiman:1984jka},
 which are trained to discriminate the $\HH$ signal from backgrounds.
-Three such classifiers are trained for each of the seven search categories,
+Three classifiers are trained for each of the seven search categories,
 targeting non-resonant $\HH$ production and resonant $\HH$ production from
 the decay of heavy particles of spin $0$ and of spin $2$, respectively.
 The binning for each BDT output distribution is chosen such that the same
 amount of background is contained in each bin, with the number of bins
 determined by the condition that the statistical uncertainty in each bin does
-not exceed $XX\%$ relative to the background contribution expected in that bin.
+not exceed $XX\%$ relative to the background contribution expected in that bin.  %% TODO: match final criteria. -AWB 11.02.2021
 
-The observables used as inputs to the BDT classifiers are:
+The observables used as inputs to the BDT classifiers include
 the $\pt$ and $\eta$ of reconstructed electrons, muons, and $\tauh$;
 the angular separation between $\Pe$, $\PGm$, and $\tauh$,
-quantified by the distance $\Delta R = \sqrt{(\eta_{1} - \eta_{2})^{2} + (\phi_{1} - \phi_{2})^{2}}$ between any pair of particles in $\eta$-$\phi$ space,
-and the angular separation of the $\Pe$, $\PGm$, and $\tauh$ to the nearest jet;
+quantified by the distance $\Delta R = \sqrt{(\eta_{1} - \eta_{2})^{2} + (\phi_{1} - \phi_{2})^{2}}$ between any pair of particles;
+the angular separation of the $\Pe$, $\PGm$, and $\tauh$ to the nearest jet;
 the number of jets in the event;
-the missing transverse momentum, quantified by the discriminant $\metLD$ described in Section~\ref{sec:eventReconstruction};
+the missing transverse momentum; %% quantified by the discriminant $\metLD$ described in Section~\ref{sec:eventReconstruction};
 the scalar sum in $\pt$ of reconstructed $\Pe$, $\PGm$, $\tauh$, and jets;
-the ``visible'' mass of the $\PHiggs$ boson pair, given by the mass of the system of reconstructed $\Pe$, $\PGm$, and $\tauh$,
+the ``visible'' mass of the $\PHiggs$ boson pair, given by the mass of the system of reconstructed $\Pe$, $\PGm$, $\tauh$, and jets;
 and the ``full'' mass of the $\HH$ system, including neutrinos, reconstructed the algorithm described in Ref.~\cite{Ehataht:2018nql}.
 The latter algorithm targets $\HH$ signal events decaying to \tttt and thus works best in the search categories \zeroLeptonFourTau and \oneLeptonThreeTau,
 where the signal contribution from the decay modes \WWWW and \WWtt is small compared to the contribution from the \tttt decay mode.
 
 These observables are complemented by further inputs, which allow the BDT to learn that the distributions in these observables for $\HH$ signal events
-change as function of model parameters:
-the $\PHiggs$ boson couplings $\lambda$, $\yt$, $\cW$, $\cZ$, $\cWW$, $\cZZ$, $\cg$, $\cgg$, and $\ctwo$ in case of non-resonant $\HH$ production
-and the mass of the heavy particle $\X$ in case of resonant $\HH$ production.
-As previously mentioned, this analysis has little sensitivity to the $\qqHH$ process and thereby to the couplings$\cW$, $\cZ$, $\cWW$, and $\cZZ$.
-We thus limit the analysis of non-resonant $\HH$ production to the five couplings $\lambda$, $\yt$, $\cg$, $\cgg$, and $\ctwo$.
+change as function of the model parameters:
+the $\PHiggs$ boson couplings $\lambda$, $\yt$, $\cg$, $\cgg$, and $\ctwo$ for non-resonant $\HH$ production,
+and the mass of the heavy particle $\X$ in resonant $\HH$ production.
+%% As previously mentioned, this analysis has little sensitivity to the $\qqHH$ process and thereby to the couplings$\cW$, $\cZ$, $\cWW$, and $\cZZ$.
+%% We thus limit the analysis of non-resonant $\HH$ production to the five couplings $\lambda$, $\yt$, $\cg$, $\cgg$, and $\ctwo$.
 The variations in these couplings are analyzed in terms of the $12$ benchmark scenarios defined in Ref.~\cite{Carvalho:2015ttv}.
-The BDT for non-resonant $\HH$ production is trained on samples of $\PHiggs$ boson pairs produced via SM $\HH$ production
-and on the samples corresponding to the $12$ different benchmark scenarios in the EFT approach.
+The BDT for non-resonant $\HH$ production is trained on samples of $\PHiggs$ boson pairs
+corresponding to the SM prediction as well as the $12$ different benchmark scenarios in the EFT approach.
 The type of sample is indicated using thirteen binary inputs to the BDT.
-The BDT classifiers used for the analysis of resonant $\HH$ production are trained on the full set of masses $m_{\X}$ described in Section~\ref{sec:datasets}
-and the mass $m_{\X}$ of the resonance is used as a real-valued input to the BDT.
+The BDT classifiers used for the analysis of resonant $\HH$ production are trained on the full set of resonance masses described in Section~\ref{sec:datasets},
+and the mass of the resonance is used as a real-valued input to the BDT.
 
 The training is performed using the $\textsc{XGBoost}$ algorithm~\cite{Chen:2016btl},
 interfaced to the $\textsc{Scikit-learn}$ machine learning library~\cite{scikit-learn}.
 The parameters of the BDT training (so-called ``hyperparameters'') are optimized using the procedure described in Ref.~\cite{Tani:2020dyi}.
-
-
-
-
