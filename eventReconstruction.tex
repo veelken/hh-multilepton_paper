@@ -45,68 +45,66 @@ Again, lower MVA selection thresholds compared to Ref.~\cite{Sirunyan:2020icl} b
 In the \twoLeptonssZeroTau channel, the uncertainty in the curvature of the muon track is required to be less than $20\%$
 to ensure a high-quality charge measurement.
 
-Hadronic decays of $\PGt$ leptons are identified by the ``hadrons-plus-strips'' (HPS) algorithm~\cite{Sirunyan:2018pgf}.
-The algorithm reconstructs individual hadronic decay modes of the $\PGt$ lepton,
-by combining the charged hadrons reconstructed by the PF algorithm with neutral pions.
-The latter are reconstructed by clustering the electrons and photons reconstructed by the PF algorithm into rectangular strips,
-which are narrow in $\eta$ but wide in $\phi$ direction.
-The strips account for the sizable probability for photons originating from neutral pion decays
-to convert into an electron-positron pair when traversing the silicon tracker.
-Conversions have the effect of broadening the energy deposits associated to these photons in the ECAL,
-as the electrons and positrons produced in the conversions are bent in opposite azimuthal directions by the magnetic field
+Hadronic decays of $\PGt$ leptons are identified using the ``hadrons-plus-strips'' (HPS) algorithm~\cite{Sirunyan:2018pgf}.
+This algorithm classifies individual hadronic decay modes of the $\PGt$ lepton
+by combining charged hadrons from the PF reconstruction with neutral pions.
+The latter are reconstructed by clustering electrons and photons into rectangular strips,
+which are narrow in $\eta$ but wide in the $\phi$ direction.
+The spread in $\phi$ accounts for photons originating from neutral pion decays
+which convert into electron-positron pairs when traversing the silicon tracker.
+These electrons and positrons are bent in opposite directions in $\phi$ by the magnetic field,
 and may further emit bremsstrahlung photons while traversing the tracker.
-The decay modes considered in this analysis are:
+The decay modes considered in this analysis are
 $\PGt^{-} \to \Ph^{-}\Pnut$, $\PGt^{-} \to \Ph^{-}\Ppizero\Pnut$, $\PGt^{-} \to \Ph^{-}\Ppizero\Ppizero\Pnut$, 
 $\PGt^{-} \to \Ph^{-}\Ph^{+}\Ph^{-}\Pnut$, and $\PGt^{-} \to \Ph^{-}\Ph^{+}\Ph^{-}\Ppizero\Pnut$
-(and analogous for the charge-conjugate decays),
-where the symbols $\Ph^{-}$ and $\Ph^{+}$ denotes either a charged pion or a charged kaon.
-The identification of $\tauh$ is performed by the ``DeepTau'' algorithm~\cite{CMS-DP-2019-033}.
-The algorithm is based on a convolutional artificial neural network (ANN)~\cite{lecun1989},
-which uses as input a set of $42$ high-level observables in combination with low-level information obtained from the silicon tracker, the electromagnetic and hadronic calorimeters, and the muon detectors.
-The former comprise the $\pt$, $\eta$, $\phi$, and mass of the $\tauh$ candidate; the reconstructed $\tauh$ decay mode;
-observables that quantify the isolation of the $\tauh$ with respect to charged and neutral particles;
-as well as observables that provide sensitivity to the small distance that a $\Pgt$ lepton typically traverses between its production and decay.
-The low-level information quantifies the particle activity within two $\eta \times \phi$ grids, centered on the direction of the $\tauh$ candidate,
-an ``inner'' grid of size $0.2 \times 0.2$, filled with cells of size $0.02 \times 0.02$,
-and an ``outer'' grid of size $0.5 \times 0.5$ (partially overlapping with the inner grid) and cells of size $0.05 \times 0.05$.
-The $\tauh$ considered in this analysis are required to satisfy the conditions $\pt > 20\GeV$ and $\abs{\eta} < 2.3$ 
-and to pass a selection on the output of the convolutional ANN.
-Two different selections on the output are used in the analysis.
-The $\tauh$ passing the loose (tight) selection are referred to as the ``fakeable'' (``tight'') $\tauh$.
-Additional discriminants are available to separate $\tauh$ from electrons and muons.
+(plus the charge-conjugate decays),
+where $\Ph^{-}$ and $\Ph^{+}$ denote charged pions or kaons.
+The``DeepTau'' algorithm~\cite{CMS-DP-2019-033} identifies $\tauh$ objects
+using a convolutional artificial neural network (ANN)~\cite{lecun1989}
+with $42$ high-level observables as input, plus low-level information obtained from the silicon tracker, the electromagnetic and hadronic calorimeters, and the muon detectors.
+The former comprise the $\pt$, $\eta$, $\phi$, and mass of the $\tauh$ candidate, the reconstructed $\tauh$ decay mode,
+its isolation with respect to charged and neutral particles,
+and the estimated distance that the $\Pgt$ lepton traverses between its production and decay.
+The low-level information quantifies the particle activity within two $\eta \times \phi$ grids, centered on the direction of the $\tauh$ candidate:
+an ``inner'' grid of size $0.2 \times 0.2$, filled with $0.02 \times 0.02$ cells,
+and an ``outer'' grid of size $0.5 \times 0.5$ (partially overlapping with the inner grid), with $0.05 \times 0.05$ cells.
+The $\tauh$ considered in this analysis are required to satisfy the conditions $\pt > 20\GeV$ and $\abs{\eta} < 2.3$,
+and to pass a loose or tight selection on the output of the ANN, designating ``fakeable'' and ``tight'' $\tauh$, respectively.
+Additional discriminants are used to separate $\tauh$ from electrons and muons.
 
-Jets are reconstructed with the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma},
-using the particles reconstructed by the PF algorithm as input,
-and are utilized to reconstruct the jets produced in $\PHiggs \to \PW\PW \to \jet\jet\Plepton\Pnu$ decays.
-Two different types of jets, reconstructed with distance parameters of $0.4$ and $0.8$ and referred to as AK4 and AK8 jets are used in this analysis.
-They are employed for the purpose of reconstructing hadronic decays of $\PW$ bosons of low $\pt$ and high $\pt$, respectively,
-accounting for the fact that the quarks produced in hadronic decays of high-$\pt$ (``boosted'') $\PW$ bosons are typically collimated,
-due to the Lorentz boost in direction of the $\PW$ boson and thus cannot be resolved as two separate AK4 jets.
-As the leptons produced in $\PHiggs \to \PW\PW \to \jet\jet\Plepton\Pnu$ decays with boosted $\PW$ bosons tend to be close to the jets,
-leptons are removed from the collection of particles used as input for the reconstruction of AK8 jets.
-The momentum of AK4 and AK8 jets is determined as the vectorial sum of all particle momenta in the jet, 
-and is found from simulation to be, on average, within $5$ to $10\%$ of the true momentum over the whole $\pt$ spectrum and detector acceptance.
-Additional $\Pp\Pp$ interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum. 
-To mitigate this effect, charged particles identified to be originating from pileup vertices are discarded and an offset correction is applied to correct for remaining contributions. 
-Jet energy corrections are derived from simulation to bring the measured response of jets to that of particle level jets on average. 
-In situ measurements of the momentum balance in dijet, $\text{photon} + \text{jet}$, $\PZ + \text{jet}$, and multijet events 
-are used to account for any residual differences in the jet energy scale between data and simulation~\cite{Khachatryan:2016kdb}. 
-The jet energy resolution amounts typically to $15$--$20\%$ at $30\GeV$, $10\%$ at $100\GeV$, and $5\%$ at $1\TeV$~\cite{Khachatryan:2016kdb}. 
-Additional selection criteria are applied to each jet to remove jets potentially dominated by anomalous contributions from various subdetector components or reconstruction failures.
-The jets considered in this analysis are required to be reconstructed within the region $\abs{\eta} < 2.4$
-and to have $\pt > 25\GeV$ if they are AK4 jets and $\pt > 100\GeV$ if they are AK8 jets.
-Additional selection criteria are applied to AK8 jets to remove jets not originating from boosted hadronic $\PW$ boson decays~\cite{Sirunyan:2019quj}.
+Jets ($\jet$) are reconstructed with the infrared and collinear safe anti-\kt algorithm~\cite{Cacciari:2008gp, Cacciari:2011ma},
+using PF reconstructed particles as input,
+and serve to identify $\PHiggs \to \PW\PW \to \jet\jet\Plepton\Pnu$ decays in this analysis.
+Jets reconstructed with distance parameters of $0.4$ (``AK4'') and $0.8$ (``AK8'') are both used:
+two AK4 jets to reconstruct the two quarks from low-$\pt$ $\PW$ decays, or a single AK8 jet to reconstruct high-$\pt$
+$\PW$ decays, where the quarks are collimated.
+As the leptons produced in $\PHiggs \to \PW\PW$ decays with boosted $\PW$ bosons tend to be close to the jets,
+leptons are removed from the AK8 jet reconstruction.
+%% %% I don't think we need to describe the full jet calibration and validation procedure.
+%% %% Jets are our least-important object, and we don't go into nearly this much detail for electrons or muons. - AWB 11.02.2021
+%% The momentum of AK4 and AK8 jets is determined as the vectorial sum of all particle momenta in the jet,
+%% and is found from simulation to be, on average, within $5$ to $10\%$ of the true momentum over the whole $\pt$ spectrum and detector acceptance.
+%% Additional $\Pp\Pp$ interactions within the same or nearby bunch crossings (pileup) can contribute additional tracks and calorimetric energy depositions to the jet momentum.
+%% To mitigate this effect, charged particles identified to be originating from pileup vertices are discarded and an offset correction is applied to correct for remaining contributions.
+%% Jet energy corrections are derived from simulation to bring the measured response of jets to that of particle level jets on average.
+%% In situ measurements of the momentum balance in dijet, $\text{photon} + \text{jet}$, $\PZ + \text{jet}$, and multijet events
+%% are used to account for any residual differences in the jet energy scale between data and simulation~\cite{Khachatryan:2016kdb}.
+After correcting for energy deposits from additional $\Pp\Pp$ interactions (pileup) and applying energy calibration,
+the jet energy resolution amounts to $15$--$20\%$ at $30\GeV$, $10\%$ at $100\GeV$, and $5\%$ at $1\TeV$~\cite{Khachatryan:2016kdb}.
+%% Additional selection criteria are applied to each jet to remove jets potentially dominated by anomalous contributions from various subdetector components or reconstruction failures.
+This analysis considers jets reconstructed in the region $\abs{\eta} < 2.4$
+with $\pt > 25\GeV$ (for AK4 jets) or $\pt > 170\GeV$ (for AK8 jets).
+Additional criteria are applied to AK8 jets to specifically select those from boosted hadronic $\PW$ boson decays~\cite{Sirunyan:2019quj}.
 
-Events containing AK4 jets originating from the hadronization of bottom quarks are vetoed in this analysis.
-The ``DeepJet'' algorithm~\cite{CMS-DP-2017-013} is used to identify these jets.
-The algorithm exploits observables related to the long lifetime of $\Pbottom$ hadrons 
-as well as to the higher particle multiplicity and mass of $\Pbottom$ jets compared to light-quark and gluon jets.
-The properties of charged and neutral particle constituents of the jet as well as of secondary vertices reconstructed within the jet
-are used as inputs to a convolutional ANN.
-Two different selections on the output of the algorithm, referred to as loose and tight WPs, are employed in this analysis, 
-for the purpose of vetoing events containing $\Pbottom$ jets.
-These selections correspond to $\Pbottom$ jet selection efficiencies of $84$ and $70\%$,
-while the respective mistag rates for light-quark and gluon jets amount to $11$ and $1.1\%$.
+Events containing AK4 jets identified with the hadronization of bottom quarks are vetoed in this analysis.
+The ``DeepJet'' algorithm~\cite{CMS-DP-2017-013}
+exploits observables related to the long lifetime of $\Pbottom$ hadrons
+and the higher particle multiplicity and mass of $\Pbottom$ jets compared to light quark and gluon jets.
+%% The properties of charged and neutral particle constituents of the jet as well as of secondary vertices reconstructed within the jet
+%% are used as inputs to a convolutional ANN.
+Both ``loose'' and ``medium'' b-tag selections on the ``DeepJet'' output are employed in this analysis,
+corresponding to $\Pbottom$ jet selection efficiencies of $84\%$ and $70\%$, respectively,
+while the mistag rates for light-quark and gluon jets are $11\%$ and $1.1\%$.
 
 The missing transverse momentum vector $\ptvecmiss$ is computed as the negative vector sum of the transverse momenta of all the particles reconstructed by the PF algorithm in an event, 
 and its magnitude is denoted as $\ptmiss$~\cite{Sirunyan:2019kia}. 
@@ -114,4 +112,4 @@ The $\ptvecmiss$ is modified to account for corrections to the energy scale of t
 A linear discriminant, denoted by the symbol $\metLD$,
 is employed to remove backgrounds in which the reconstructed $\ptmiss$ arises from resolution effects.
 The discriminant is defined by the relation $\metLD = 0.6 \ptmiss + 0.4 \metHT$,
-where the observable $\metHT$ corresponds to the magnitude of the vector $\pt$ sum of electrons, muons, $\tauh$, and jets~\cite{Sirunyan:2018shy}.
+where $\metHT$ corresponds to the magnitude of the vector $\pt$ sum of electrons, muons, $\tauh$, and jets selected in this analysis~\cite{Sirunyan:2018shy}.
