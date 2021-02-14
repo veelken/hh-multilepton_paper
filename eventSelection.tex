@@ -2,11 +2,11 @@
 \label{sec:eventSelection}
 
 Events are selected with the aim of maximizing the acceptance for $\HH$ decays to $\WWWW$, $\WWtt$, and
-$\tttt$, while simultaneously rejecting the overwhelming backgrounds, which arise from multijet production, 
+$\tttt$, while simultaneously rejecting the large backgrounds from multijet production,
 the production of single $\PW$ and $\PZ$ bosons, $\PW$ and $\PZ$ boson pair production, and $\ttbar$ production.  To achieve this, we require multiple
 reconstructed leptons $\lep$ (electrons or muons) or hadronically decaying taus
-\tauh to be associated with the collision vertex in each event.  The leptons and $\tauh$ may originate
-from the decay of a $\PW$ boson or from a $\Pgt$ decay.  Signal candidate events
+\tauh to be associated with the primary collision vertex.  The leptons and $\tauh$ may originate
+from the decay of a $\PW$ boson or from a $\Pgt$ lepton decay.  Signal candidate events
 are sub-divided into seven mutually exclusive categories based on lepton and $\tauh$
 multiplicity: two same-sign leptons with less than two hadronic taus (\llss),
 three leptons with no hadronic taus (\lllnot), at least four leptons (\llll),
@@ -19,28 +19,28 @@ The event category is determined using lepton and $\tauh$ multiplicity based on 
 To reduce background contamination from processes with top quarks, events with
 at least one AK4 jet passing the ``medium'' b-tag identification, or at least two
 jets passing the ``loose'' b-tag criteria, are discarded. 
-Leptons originating from low-mass Drell-Yan production, from decays of $\PJpsi$ and $\PUpsilon$ meson,
-from cascade decays of bottom quarks, and from photon conversions
-are removed by vetoing events containing a pair of ``loose'' leptons of mass $m(\leplep) < 12\GeV$.
+Leptons originating from low-mass Drell-Yan production, decays of $\PJpsi$ and $\PUpsilon$ mesons,
+cascade decays of bottom quarks, and photon conversions
+are removed by vetoing events containing a pair of ``loose'' leptons with mass $m(\leplep) < 12\GeV$.
 To eliminate overlap with events selected in the search for $\HH$ production in the $\Pbottom\APbottom\PZ\PZ$, $\PZ\PZ \to 4\Plepton$ decay mode~\cite{HIG-20-004}, no event in the
 non-\tauh categories (\llss, \lllnot, and \llll) may contain two same-flavor,
 opposite-charge ``loose'' lepton pairs with a combined mass less than $140\GeV$.
 In addition, to reduce the \Zll background, these categories along with
 \lltt exclude events where any same-flavor opposite-charge pair of ``loose''
-leptons has a mass between $81$ and $101\GeV$.
+leptons has a mass between $81$ and $101\GeV$.  %% Not applied in 3L1T? -AWB 11.02.2021
 
-The leptons and \tauh selected in any of the signal regions of the seven event categories must pass the ``tight'' selection 
-described in Section~\ref{sec:eventReconstruction}.
-In addition, they are required to pass category-specific $\pt$ thresholds.
-The latter are motivated by the trigger selection.
-Further requirements are placed on the charge-sum of leptons and $\tauh$
-and, in most categories, also on the missing transverse momentum (measured with $\metLD$),
+The leptons and \tauh selected in any of the signal regions of the seven event categories must pass the ``tight''
+identification criteria described in Section~\ref{sec:eventReconstruction}.
+In addition, they are required to pass category-specific $\pt$ thresholds,
+which are motivated by the trigger selection.
+Further requirements are placed on the charge-sum of leptons and $\tauh$,
+and in most categories, on the missing transverse momentum (measured with $\metLD$),
 and the multiplicity of AK4 or AK8 jets (targeting hadronic $\PW$ decays). 
 
 The leading and subleading lepton in the \llss category must pass $\pt$ cuts of $25$ and $15\GeV$, respectively,
 and have the same charge.
-The events selected in this category are furthermore required to contain either at least three AK4 jets or one AK8 jet and at least one AK4 jet. %% (TODO - check!)
-Events in with both leptons are electrons must have $\metLD > 30\GeV$, in order to suppress
+The events selected in this category are furthermore required to contain either at least two AK4 jets or one AK8 jet. %% TODO - check! -AWB 11.02.2021
+Events in which both leptons are electrons must have $\metLD > 30\GeV$ and $m(\leplep) < 81$ or $m(\leplep) > 101$, in order to suppress
 charge mis-identified $\Zee$ background.
 After this selection, the main backgrounds in the \llss category are due to $\PW\PZ$ production
 and to events in which one or both reconstructed leptons arise from the misidentification of a non-prompt lepton or hadron,
@@ -71,22 +71,22 @@ while $\PZ\PZ$ production dominates the background.
 
 The \lltt category requires
 the leading and subleading lepton to pass $\pt$ thresholds of $25$ and $15\GeV$, 
-while the two $\tauh$ of highest $\pt$ must bring the total lepton+$\tauh$ charge sum to zero.
+while the two $\tauh$ of highest $\pt$ must bring the total lepton plus $\tauh$ charge sum to zero.
 Signal contributions are mostly due to the \WWtt ($60\%$) and \tttt ($40\%$) decay modes, 
 while background contributions mostly arise from $\PZ\PZ$ production and from events with a misidentified lepton or $\tauh$.
 
 In the \lttt category,
 the leading lepton is required to satisfy the conditions 
-$\abs{\eta} < 2.1$, and $\pt > 20\GeV$ if it is an electron and $\pt > 15\GeV$ if it is a muon,
+$\abs{\eta} < 2.1$, and $\pt > 20 (15)\GeV$ if it is an electron (muon),
 in order to pass the trigger.
 The leading, subleading, and third
 $\tauh$ must have $\pt > 40$, $30$, and $20\GeV$, respectively, and the sum of $\tauh$ and lepton charges is required to be zero.
 Background events containing a $\Zee$ decay where one electron is misidentified
 as a $\tauh$ are vetoed by discarding events containing an electron-$\tauh$ pair of opposite charge
-and mass between $71$ and $101\GeV$, and in which the $\tauh$ either fails a loose cut on the discriminant that separates $\tauh$ from electrons
+and mass between $71$ and $101\GeV$, and in which the $\tauh$ either fails a loose cut on the discriminant that separates $\tauh$ from electrons,
 or falls near the ECAL barrel-endcap ``crack'' in $1.46 < \abs{\eta} < 1.558$.  Around $80\%$ of $\HH$ signal events selected in the \lttt category
 come from the \tttt and $20\%$ from the \WWtt decay mode, while the majority of
-background events come from either $\PZ\PZ$ production or contain a misidentified lepton or $\tauh$.
+background events result from $\PZ\PZ$ production or contain a misidentified lepton or $\tauh$.
 
 The \noltttt category has identical $\pt$ requirements on the leading three $\tauh$,
 and the fourth \tauh is also required to have $\pt > 20\GeV$.  Due to the extremely
@@ -98,75 +98,70 @@ $\PHiggs$ boson production.
 \begin{table}[!h]
 \begin{center}
 \begin{scriptsize}
-\begin{tabular}{lrclrclrcl}
+\begin{tabular}{lrlrlrl}
 \hline
-Process &\multicolumn{3}{c}{\llss}&\multicolumn{3}{c}{\lllnot}&\multicolumn{3}{c}{\llll}\\
+Process & \multicolumn{2}{c}{\llss} & \multicolumn{2}{c}{\lllnot} & \multicolumn{2}{c}{\llll} \\
 \hline
-$\HH\rightarrow$\WWWW $\dagger$&39.0&$\pm$&0.9&31.7&$\pm$&0.6&2.15&$\pm$&0.09\\
-$\HH\rightarrow$\WWtt $\dagger$&9.2&$\pm$&0.3&11.4&$\pm$&0.4&0.90&$\pm$&0.06\\
-$\HH\rightarrow$\tttt $\dagger$&0.5&$\pm$&0.0&0.9&$\pm$&0.0&0.10&$\pm$&5.07E-3\\
- \\
-$\PZ\PZ$&26.0&$\pm$&0.8&117.9&$\pm$&3.4&54.85&$\pm$&2.32\\
-$\PW\PZ$&545.1&$\pm$&12.4&1334.5&$\pm$&14.6&0.43&$\pm$&0.04\\
-Conversion&263.0&$\pm$&46.8&156.0&$\pm$&29.6&0.49&$\pm$&0.45\\
-Fakes&1433.6&$\pm$&53.4&578.2&$\pm$&31.4&2.40&$\pm$&1.03\\
-Flips background& & --- && & --- && & --- &\\
-Flips&113.4&$\pm$&11.2& & --- && & --- &\\
-Single Higgs&77.4&$\pm$&2.3&62.4&$\pm$&2.4&2.48&$\pm$&0.34\\
-Other backgrounds&1117.9&$\pm$&56.1&354.2&$\pm$&27.7&4.48&$\pm$&0.35\\
-Total expected background   &3576.4&$\pm$&53.4&2603.2&$\pm$&41.4&65.13&$\pm$&2.02\\
- \\
-Data& & --- && & --- && & --- & \\
+$\HH \rightarrow \WWWW \times 30 \: \dagger$ & 39.0 & $\pm \: 0.9$ & 31.7 & $\pm \: 0.6$ & 2.15 & $\pm \: 0.09$ \\
+$\HH \rightarrow \WWtt \times 30 \: \dagger$ & 9.2 & $\pm \: 0.3$ & 11.4 & $\pm \: 0.4$ & 0.90 & $\pm \: 0.06$ \\
+$\HH \rightarrow \tttt \times 30 \: \dagger$ & 0.5 & $\pm \: 0.0$ & 0.9 & $\pm \: 0.0$ & 0.10 & $\pm \: 0.005$ \\
+\hline
+$\PZ\PZ$ & 26.0 & $\pm \: 0.8$ & 117.9 & $\pm \: 3.4$ & 54.85 & $\pm \: 2.32$ \\
+$\PW\PZ$ & 545.1 & $\pm \: 12.4$ & 1334.5 & $\pm \: 14.6$ & 0.43 & $\pm \: 0.04$ \\
+Conversion & 263.0 & $\pm \: 46.8$ & 156.0 & $\pm \: 29.6$ & 0.49 & $\pm \: 0.45$ \\
+Fakes & 1433.6 & $\pm \: 53.4$ & 578.2 & $\pm \: 31.4$ & 2.40 & $\pm \: 1.03$ \\
+Flips & 113.4 & $\pm \: 11.2$ &   ---  &  &   ---  & \\
+Single Higgs & 77.4 & $\pm \: 2.3$ & 62.4 & $\pm \: 2.4$ & 2.48 & $\pm \: 0.34$ \\
+Other backgrounds & 1117.9 & $\pm \: 56.1$ & 354.2 & $\pm \: 27.7$ & 4.48 & $\pm \: 0.35$ \\
+Total expected background    & 3576.4 & $\pm \: 53.4$ & 2603.2 & $\pm \: 41.4$ & 65.13 & $\pm \: 2.02$ \\
+\hline
+Data &   ---  &  &   ---  &  &   ---  &  \\
 \hline
 \end{tabular}
 \end{scriptsize}
 \end{center}
 \begin{center}
 \begin{scriptsize}
-\begin{tabular}{lrclrclrclrcl}
+\begin{tabular}{lrlrlrlrl}
 \hline
-Process &\multicolumn{3}{c}{\noltttt}&\multicolumn{3}{c}{\lttt}&\multicolumn{3}{c}{\lltt}&\multicolumn{3}{c}{\lllt}\\
+Process & \multicolumn{2}{c}{\noltttt} & \multicolumn{2}{c}{\lttt} & \multicolumn{2}{c}{\lltt} & \multicolumn{2}{c}{\lllt} \\
 \hline
-$\HH\rightarrow$\WWWW $\dagger$&0.27&$\pm$&3.34E-3&0.20&$\pm$&0.01&0.16&$\pm$&0.01&0.88&$\pm$&0.04\\
-$\HH\rightarrow$\WWtt $\dagger$&0.08&$\pm$&0.02&0.59&$\pm$&0.11&3.81&$\pm$&0.32&3.95&$\pm$&0.17\\
-$\HH\rightarrow$\tttt $\dagger$&1.32&$\pm$&0.20&2.49&$\pm$&0.27&2.21&$\pm$&0.13&0.85&$\pm$&0.03\\
+$\HH \rightarrow \WWWW \times 30 \: \dagger$ & 0.27 & $\pm \: 0.003$ & 0.20 & $\pm \: 0.01$ & 0.16 & $\pm \: 0.01$ & 0.88 & $\pm \: 0.04$ \\
+$\HH \rightarrow \WWtt \times 30 \: \dagger$ & 0.08 & $\pm \: 0.02$ & 0.59 & $\pm \: 0.11$ & 3.81 & $\pm \: 0.32$ & 3.95 & $\pm \: 0.17$ \\
+$\HH \rightarrow \tttt \times 30 \: \dagger$ & 1.32 & $\pm \: 0.20$ & 2.49 & $\pm \: 0.27$ & 2.21 & $\pm \: 0.13$ & 0.85 & $\pm \: 0.03$ \\
+\hline
+$\PZ\PZ$ & 0.79 & $\pm \: 0.07$ & 1.89 & $\pm \: 0.12$ & 18.42 & $\pm \: 0.57$ & 24.14 & $\pm \: 0.41$ \\
+$\PW\PZ$ &   ---  &  &   ---  &  & 0.01 & $\pm \: 0.003$ & 0.17 & $\pm \: 0.02$ \\
+Fakes & 1.66 & $\pm \: 2.52$ & 2.53 & $\pm \: 2.32$ & 32.99 & $\pm \: 3.80$ & 27.36 & $\pm \: 3.29$ \\
+Single Higgs & 0.38 & $\pm \: 0.14$ & 0.74 & $\pm \: 0.78$ & 2.94 & $\pm \: 1.18$ & 3.55 & $\pm \: 0.15$ \\
+Other backgrounds & 0.03 & $\pm \: 0.05$ & 0.13 & $\pm \: 0.08$ & 2.63 & $\pm \: 0.47$ & 3.08 & $\pm \: 0.20$ \\
+Total expected background    & 2.86 & $\pm \: 2.53$ & 5.29 & $\pm \: 2.48$ & 56.99 & $\pm \: 4.14$ & 58.30 & $\pm \: 3.38$ \\
+\hline
+Data &   ---  &  &   ---  &  &   ---  &  &   ---  &  \\
+\hline
+\end{tabular}
+\end{scriptsize}
+\end{center}
+\begin{center}
+\begin{scriptsize}
+\begin{tabular}{lrlrl}
+\hline
+Process & \multicolumn{2}{c}{\threeLeptonCR} & \multicolumn{2}{c}{\fourLeptonCR}  \\
+\hline
+$\PZ\PZ$ & 805.6 & $\pm \: 9.1$ & 2030.9 & $\pm \: 28.5$ \\
+$\PW\PZ$ & 12480.4 & $\pm \: 52.6$ & 0.5 & $\pm \: 0.2$ \\
+Conversion & 140.4 & $\pm \: 24.5$ &   ---  & \\
+Fakes & 864.6 & $\pm \: 24.7$ & 14.6 & $\pm \: 3.7$ \\
+Other backgrounds & 612.0 & $\pm \: 33.3$ & 47.9 & $\pm \: 1.9$ \\
+Total expected background    & 15001.7 & $\pm \: 72.6$ & 2114.4 & $\pm \: 14.8$ \\
+\hline
+Data & \multicolumn{2}{c}{14994} & \multicolumn{2}{c}{2118} \\
+\hline
+\end{tabular}
 \\
-$\PZ\PZ$&0.79&$\pm$&0.07&1.89&$\pm$&0.12&18.42&$\pm$&0.57&24.14&$\pm$&0.41\\
-$\PW\PZ$& & --- && & --- &&0.01&$\pm$&3.21E-3&0.17&$\pm$&0.02\\
-Conversion& & --- && & --- && & --- && & --- &\\
-Fakes&1.66&$\pm$&2.52&2.53&$\pm$&2.32&32.99&$\pm$&3.80&27.36&$\pm$&3.29\\
-Flips background& & --- && & --- && & --- && & --- &\\
-Flips& & --- && & --- && & --- && & --- &\\
-Single Higgs&0.38&$\pm$&0.14&0.74&$\pm$&0.78&2.94&$\pm$&1.18&3.55&$\pm$&0.15\\
-Other backgrounds&0.03&$\pm$&0.05&0.13&$\pm$&0.08&2.63&$\pm$&0.47&3.08&$\pm$&0.20\\
-Total expected background   &2.86&$\pm$&2.53&5.29&$\pm$&2.48&56.99&$\pm$&4.14&58.30&$\pm$&3.38\\
- \\
-Data& & --- && & --- && & --- && & --- & \\
-\hline
-\end{tabular}
-\end{scriptsize}
-\end{center}
-\begin{center}
-\begin{scriptsize}
-\begin{tabular}{lrclrcl}
-\hline
-Process &\multicolumn{3}{c}{\threeLeptonCR}&\multicolumn{3}{c}{\fourLeptonCR}\\
-\hline
-$\PZ\PZ$&805.6&$\pm$&9.1&2030.9&$\pm$&28.5\\
-$\PW\PZ$&12480.4&$\pm$&52.6&0.5&$\pm$&0.2\\
-Conversion&140.4&$\pm$&24.5& & --- &\\
-Fakes&864.6&$\pm$&24.7&14.6&$\pm$&3.7\\
-Flips background& & --- && & --- &\\
-Flips& & --- && & --- &\\
-Single Higgs& & --- && & --- &\\
-Other backgrounds&612.0&$\pm$&33.3&47.9&$\pm$&1.9\\
-Total expected background   &15001.7&$\pm$&72.6&2114.4&$\pm$&14.8\\
- \\
-Data&\multicolumn{3}{c}{14994}&\multicolumn{3}{c}{2118} \\
-\hline
-\end{tabular}
 \begin{tabular}{l}
-$\dagger$ The $\HH$ signal represents the sum of the \ggHH and \qqHH production processes \\and is normalized to $30 \times$ the event yield expected in the SM\\
+  $\dagger$ The $\HH$ signal represents the sum of the \ggHH and \qqHH production processes \\
+            and is normalized to $30 \times$ the event yield expected in the SM \\
 \end{tabular}
 \end{scriptsize}
 \end{center}
